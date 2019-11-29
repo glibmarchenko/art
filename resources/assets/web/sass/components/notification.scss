@@ -1,0 +1,110 @@
+
+/* NOTIFICATIONS section*/
+
+.notifications-section{
+  display: none;
+  position: fixed;
+  top: $f68;
+  right: 0;
+  width: 25%;
+  z-index: 33;
+  bottom: 0;
+  background-color: $black;
+
+  .notif-top{
+    position: relative;
+    width: 100%;
+    a {
+      height:$f68;
+      line-height:$f68;
+    }
+    &.hasNoNew {
+      a {
+        height:$f68;
+        line-height:$f68;
+        color:$gray!important;
+        &:hover {
+          background-color: #34343d;
+        }
+      }
+    }
+    a{
+      position: relative;
+      display: inline-block;
+      float: left;
+      width: 50%;
+      font-family: AcrobatBold;
+      font-size: $f21;
+      text-align: center;
+      background-color: #34343d;
+      color: #fff!important;
+      text-decoration: none!important;
+      &:hover{
+        background-color: #44444c;
+      }
+      &:first-child{
+        border-right: fn-w(1) solid #44444c;
+      }
+      &:last-child{
+        border-left: fn-w(1) solid #44444c;
+      }
+    }
+  }
+
+  .notifications-list{
+    position: relative;
+    width: 100%;
+    overflow-y: auto;
+    height:calc(100vh - #{$f68});
+    .notification-row{
+      padding: $f26 $f34;
+      border-bottom: fn-w(1) solid #44444c;
+      display: block;
+      text-decoration: none;
+
+      .notif-message{
+        font-family: AcrobatRegular;
+        font-size: $f21;
+        color: $white!important;
+        line-height: 1.3;
+        margin-bottom: $f26;
+      }
+
+      .notif-date{
+        font-family: AcrobatRegular;
+        font-size: fn-w(15);
+        color: $white!important;
+        line-height: 1.3;
+        opacity: 0.38;
+      }
+
+      &.notifViewed{
+        .notif-message{
+          opacity: 0.38;
+        }
+      }
+    }
+  }
+
+  .notif-bottom{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    a{
+      position: relative;
+      display: block;
+      width: 100%;
+      font-family: AcrobatBold;
+      font-size: $f21;
+      text-align: center;
+      background-color: #34343d;
+      color: #fff!important;
+      text-decoration: none!important;
+      &:hover{
+        background-color: #44444c;
+      }
+    }
+  }
+}
+

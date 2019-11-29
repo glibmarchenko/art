@@ -1,0 +1,39 @@
+@import '../../components/galleries';
+
+@media screen and (max-width: 700px) {
+  .galleries {
+    margin-top: $f288;
+    .row {
+      width: 100%;
+      margin-left: -$f34;
+      margin-right: -$f34;
+    }
+    .gallery-container {
+      width: 100%;
+      height: $f466;
+      margin-left: $f34;
+      margin-right: $f34;
+      .gallery-avatar {
+        border: $f8 solid #fff;
+        .img-block {
+          height: $f288;
+        }
+      }
+      .gallery-content {
+        height: $f144;
+        .name {
+          font-size: $f42;
+          font-family: AcrobatExtraBold, sans-serif;
+          margin-top: $f34;
+          margin-left: $f34;
+          text-transform: uppercase;
+        }
+        .country {
+          font-size: $f42;
+          font-family: AcrobatBold, sans-serif;
+          margin-left: $f34;
+        }
+      }
+    }
+  }
+}

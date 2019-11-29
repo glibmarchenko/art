@@ -1,0 +1,216 @@
+/*
+    Center element vertically and horizontally
+    Parent element should have position relative
+
+    usage : @include centerer;
+ */
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin vertical-centerer {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+/*
+Mixin to customize scrollbars
+Beware, this does not work in all browsers
+@author Hugo Giraudel
+@param {Length} $size - Horizontal scrollbar's height and vertical scrollbar's width
+@param {Color} $foreground-color - Scrollbar's color
+@param {Color} $background-color [mix($foreground-color, white, 50%)] - Scrollbar's color
+@example scss - Scrollbar styling
+@include scrollbars(.5em, slategray);
+*/
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+  // For Google Chrome
+  ::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
+
+/*
+  Mixin used to keep element aspect ratio
+  https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+
+ */
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+
+@mixin respond-to($media) {
+  @if $media==mobile {
+    @media screen and (max-width: $small - 1) {
+      @content;
+    }
+  }
+  @else if $media==mediumscreen {
+    @media screen and (min-width: $small) and (max-width: $large - 1) {
+      @content;
+    }
+  }
+  @else if $media==largescreen {
+    @media screen and (min-width: $large) {
+      @content;
+    }
+  }
+}
+
+
+/*
+  Function for converting PX to VW.
+  As a result, the function returns the pixel value from the width (1920px) of the window.
+
+  Usage: padding: fnW(16); //result: padding: 0.83333333vw
+
+ */
+@function fn-w($val) {
+  @return #{($val * 100) / 1920}vw;
+}
+
+/*
+  Function for converting PX to VH.
+  As a result, the function returns the pixel value from the height (1200px) of the window.
+
+  Usage: padding: fnH(16); //result: padding: 1.33333333vh
+
+ */
+@function fn-h($val) {
+  @return #{($val * 100) / 1200}vh;
+}
+
+@function decrease-fib($index, $step) {
+  @return nth($numbers-list, if($index > $step, $index - $step, $step))
+}
+
+@function get-fib-size($number, $platform-size) {
+  @return #{($number / $platform-size * 100)}vw;
+}
+
+@mixin make-buttons($platform-size, $platform-short) {
+  @each $number in $numbers-list {
+    $index: index($numbers-list, $number);
+    $size: get-fib-size($number, $platform-size);
+    $size-three: get-fib-size(decrease-fib($index, 3), $platform-size);
+    $size-four: get-fib-size(decrease-fib($index, 4), $platform-size);
+
+    .btn-#{$platform-short}-#{$number} {
+      font-size: $size-four !important;
+      height: $size;
+      line-height: calc(#{$size} - 2px);
+      border-radius: $size;
+      padding: 0 $size-three fn-w(5);
+    }
+  }
+}
+
+/*
+    Margin: top menu + padding to have space after menu
+ */
+@mixin top-space {
+  @media screen and (min-width: 1081px) {
+
+    //main page
+    margin-top: $f68;
+
+    //subpage with subscribe navigation bar
+    #subscription-navigation + &, .second-menu + & {
+      margin-top: $f68 * 2;
+    }
+
+    //subpage with filter
+    .filter-section + #main-content & {
+      margin-top: $f68 * 2;
+      padding-top: $f110;
+    }
+
+    //subpage without filter
+    .menu-section + &, .menu-section + div &, #nav-section + &, #nav-section + div & {
+      margin-top: $f68;
+      padding-top: $f110;
+    }
+  }
+}
+
+@mixin btn-centered {
+  text-align: center;
+  margin-top: $f34;
+}
+
+@mixin product-image {
+  height: $f233;
+  width: $f233;
+  display: inline-block;
+}
+
+@mixin product-details {
+  .product-author {
+    font-family: AcrobatBold, sans-serif;
+    font-size: $f21;
+    line-height: $f21;
+    color: $black;
+    margin-bottom: $f8;
+  }
+
+  .product-name {
+    font-family: AcrobatBold, sans-serif;
+    font-size: $f21;
+    line-height: $f21;
+    color: $gray;
+    margin-bottom: $f8;
+  }
+
+  .product-details-list {
+    margin-top: $f26;
+
+    li {
+      font-family: AcrobatRegular, sans-serif;
+      font-size: $f21;
+      line-height: $f21;
+      color: $gray;
+      margin-bottom: $f8;
+
+      span {
+        font-family: AcrobatBold, sans-serif;
+        font-size: $f21;
+        line-height: $f21;
+        color: $black;
+      }
+
+    }
+  }
+}

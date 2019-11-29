@@ -1,0 +1,24 @@
+* {
+  vertical-align: top;
+  box-sizing:border-box;
+}
+
+.pull-right {
+  float:right;
+}
+
+.list-inline {
+  display:inline-block;
+
+  li {
+    display:inline-block;
+  }
+}
+
+.pos-relative{
+  position: relative;
+}
+.tint-overlay {
+  -webkit-filter: grayscale; /*sepia, hue-rotate, invert....*/
+  -webkit-filter: brightness(50%);
+}

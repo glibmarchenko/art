@@ -1,0 +1,59 @@
+@import '../../pages/create_item';
+
+@media screen and (max-width: 700px) {
+
+  .new-item-content {
+    background-color: #F7F6F4;
+    .small-info-block {
+      display: none;
+    }
+    .picture-status {
+
+      //display: flex;
+      /*.btn:nth-child(2) {
+        margin-left: auto;
+        margin-right: auto;
+      }*/
+      .btn {
+        margin: $f34 $f21;
+      }
+    }
+    .inputs-2 {
+      .form-row {
+        width: 100% !important;
+        &:first-child {
+          margin-right: 0;
+        }
+        &:nth-child(2) {
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        }
+      }
+    }
+    .inputs-4 {
+      .form-row {
+        width: 47.5% !important;
+        &:nth-child(2n - 1) {
+          margin-left: 0 !important;
+          margin-right: 2.5% !important;
+        }
+        &:nth-child(2n) {
+          margin-left: 2.5% !important;
+          margin-right: 0 !important;
+        }
+      }
+    }
+    .picture-materials {
+      .btn {
+        margin-right: $f21;
+      }
+    }
+  }
+
+  .info-block-bold.notification {
+    font-size: $f42 !important;
+    br, span {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,520 @@
+/*
+  Fibonacci shortcuts for vh
+ */
+$fh-full: 100vh;
+
+/*
+  Colors
+*/
+$mediumgray: #646464;
+
+#left-block-au {
+  width: 25%;
+  background-color: $white;
+  height: calc(#{$fh-full});
+  flex-direction: column;
+  position: fixed;
+  top: $f68;
+  #info-box{
+    display: none;
+  }
+  .card-menu {
+    overflow-y: auto;
+    max-height: calc(100%);
+    flex: 1 0 auto;
+
+    &.author-details {
+      max-height: 100%;
+    }
+
+    .author-avatar {
+      img {
+        width: 100%;
+      }
+    }
+    .header {
+      padding: $f34;
+      border-bottom: 2px solid $lightgray;
+      figure {
+        height: $f68;
+        width: $f68;
+        display: inline-block;
+        img {
+          border-radius: 50%;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border: 2px solid $white;
+        }
+      }
+      .about-user {
+        display: inline-block;
+        padding: $f13 0 0 $f21;
+        h5 {
+          font-size: $f21;
+          font-family: AcrobatBold, sans-serif;
+          padding-bottom: $f5;
+        }
+        p {
+          font-size: $f16;
+        }
+      }
+      .button {
+        display: inline-block;
+        float: right;
+        margin-top: $f26;
+        a {
+          text-decoration: none;
+          font-size: $f16;
+        }
+      }
+    }
+    .check-card {
+      padding: $f34;
+      font-family: AcrobatBold, sans-serif;
+      border-bottom: 2px solid $lightgray;
+      .title {
+        font-size: $f34;
+        padding-bottom: $f42;
+      }
+      form {
+        p {
+          margin-bottom: $f26;
+          label {
+            display: block;
+            font-size: $f21;
+            color: $gray;
+            margin-bottom: $f16;
+            line-height: $f21;
+          }
+          > span {
+            height: $f68;
+            color: $black;
+            background-color: $lightgray;
+            display: block;
+            i {
+              font-family: ProximaNovaBold, sans-serif;;
+              padding: $f26;
+              font-size: $f21;
+              display: inline-block;
+            }
+          }
+          .select2 {
+            width: 100% !important;
+            .select2-selection--single {
+              background-color: $lightgray;
+              .select2-selection__rendered {
+                color: $black;
+              }
+            }
+          }
+        }
+        div {
+          p {
+            display: inline-block;
+            width: calc((100% - #{$f21}) / 2);
+          }
+        }
+      }
+    }
+    .description {
+    margin-bottom:$f144;
+      h6 {
+        margin-top: $f21;
+      }
+      p {
+        font-size: $f21;
+        color: $mediumgray;
+        line-height: $f26;
+        word-wrap: break-word;
+      }
+    }
+    .key-words {
+      margin-top: $f21;
+      margin-bottom: $f110;
+      ul li {
+        display: inline-block;
+        margin-right: $f8;
+        margin-bottom: $f8;
+        a {
+          font-size: $f16;
+          font-family: AcrobatBold, sans-serif;
+          text-decoration: none;
+          color: $gray;
+          border-color: $lightgray;
+        }
+      }
+    }
+    .description,
+    .key-words {
+      padding: $f34;
+      h1 {
+        font-family: AcrobatBold, sans-serif;
+        font-size: $f26;
+        color: $black;
+        margin-bottom: $f10;
+      }
+      h2 {
+        font-family: AcrobatRegular, sans-serif;
+        font-size: $f21;
+        color: $black;
+        margin-bottom: $f26;
+      }
+    }
+  }
+  .buy-block {
+    background-color: $black;
+    height: $f144;
+    flex: 0 0 auto;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    div {
+      display: inline-block;
+    }
+    .price {
+      font-size: $f55;
+      line-height: $f55;
+      font-family: AcrobatBold, sans-serif;
+      color: $white;
+      padding: $f42 0 0 $f34;
+      span {
+        font-size: $f34;
+        line-height: $f68;
+        padding-left: $f5;
+      }
+    }
+    .btn-buy {
+      @media screen and (min-width: 700px) {
+        float: right;
+        padding: $f42 $f34 0 0;
+        font-size: $f21;
+      }
+      a {
+        display: block;
+      }
+    }
+  }
+
+  a {
+    &.btn {
+      &.btn-blue {
+        color: $white;
+        background-color: $blue;
+        text-transform: uppercase;
+        font-family: ProximaNovaBold, sans-serif;
+        border: none;
+        &:hover {
+          background-color: $blue - 20;
+        }
+      }
+      &.btn-green {
+        text-transform: uppercase;
+        font-family: ProximaNovaBold, sans-serif;
+        color: $green;
+        border-color: $green;
+        text-decoration: none;
+        &:hover {
+          background-color: $green;
+          color: $white;
+        }
+      }
+      &.medium {
+        padding: $f16 $f26;
+        border-radius: $f34;
+        &.subscribe-now {
+          &:hover {
+            .b-follow {
+              background-color: $green;
+              color: $white;
+            }
+          }
+        }
+        &.subscribed {
+          background-color: #1BE5A8;
+          color: white;
+          .b-follow {
+            display: none;
+          }
+          .b-unfollow {
+            display: block;
+          }
+        }
+        .b-follow {
+          text-transform: uppercase;
+          font-family: ProximaNovaBold, sans-serif;
+          color: $green;
+          border-color: $green;
+          text-decoration: none;
+          font-size: $f21;
+          &:hover {
+            background-color: $green;
+            color: $white;
+          }
+        }
+        .b-unfollow {
+          display: none;
+          text-transform: uppercase;
+          font-family: ProximaNovaBold, sans-serif;
+          border-color: $green;
+          text-decoration: none;
+          background-color: #1BE5A8;
+          font-size: $f21;
+          color: white;
+          &:hover {
+            background-color: $green;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  .block-text-details {
+    margin-bottom: $f26;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .block-details-title {
+      font-size: $f26;
+      margin-bottom: $f16;
+      font-weight: bold;
+
+    }
+    .block-details-body {
+      font-size: $f21;
+      line-height: 1.2;
+    }
+  }
+
+  .gallery-link {
+    margin-bottom: $f34;
+    margin-top: -$f16;
+    a {
+      font-size: $f21;
+      color: $red;;
+    }
+  }
+
+}
+.likes-list {
+  padding:$f55;
+}
+#right-block-au {
+  width: 75%;
+  background-color: $lightgray;
+  height: calc(#{$fh-full} - #{$f68});
+  position: absolute;
+  right: 0;
+  top: $f68;
+  text-align: left;
+  overflow: auto;
+  h2{
+    display: none;
+  }
+  h1 {
+    margin-top:$f68;
+    margin-left:$f68;
+    font-size: $f42;
+    line-height: $f42;
+    height:$f55;
+    color: $black;
+    margin-bottom:0;
+    font-family: UniNeueBold, sans-serif;
+  }
+
+  .author-name {
+    margin-bottom:$f34;
+  }
+
+.close {
+  position: absolute;
+  text-align: center;
+  vertical-align: $f68;
+  width: $f68;
+  height: $f68;
+  background-color: $gray;
+  right: $f34;
+  top: $f34;
+  border-radius: $f68;
+  color: $black;
+  &.close-product-overview {
+    img {
+      width: fn-w(68);
+      height: fn-w(68);
+    }
+  }
+}
+
+.list-products {
+  width: 100%;
+  .my-products-title {
+    font-size: $f42;
+    color: $black;
+    margin-bottom: $f34;
+    line-height: 1.2;
+    font-family: UniNeueBold;
+  }
+  .my-products-list {
+    margin-bottom: $f68;
+    width: 100%;
+
+    .wrapper {
+      padding: 0;
+    }
+    #columns {
+      /*-webkit-column-count: 3;
+      -webkit-column-gap: $f34;
+      -webkit-column-fill: auto;
+      -moz-column-count: 3;
+      -moz-column-gap: $f34;
+      -moz-column-fill: auto;
+      column-count: 3;
+      column-gap: $f34;
+      column-fill: auto;
+      vertical-align: top;*/
+      position: relative;
+      &.columns-3 {
+        .pic-content-block {
+          width: 30%;
+        }
+      }
+    }
+  }
+  .author-index-products {
+    width: calc(100% + #{$f34});
+  }
+}
+
+&.column-4 {
+  width: 100%;
+  #columns {
+    /*-webkit-column-count: 4!important;
+    -moz-column-count: 4!important;
+    column-count: 4!important;*/
+  }
+}
+
+.pic-wrap {
+  // @include centerer;
+  height: auto;
+  width: auto;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  max-height: 100%;
+  padding: $f8;
+  .product-frame {
+
+  }
+  /*img {
+    max-width:100%;
+    max-height:100%;
+    outline: 1px solid whitesmoke;
+    padding:$f13;
+    background-color:white;
+  }*/
+}
+
+a {
+  &.btn {
+    &.btn-blue {
+      color: $white;
+      background-color: $blue;
+      text-transform: uppercase;
+      font-family: ProximaNovaBold, sans-serif;
+      border: none;
+      &:hover {
+        background-color: $blue - 20;
+      }
+    }
+    &.btn-green {
+      text-transform: uppercase;
+      font-family: ProximaNovaBold, sans-serif;
+      color: $green;
+      border-color: $green;
+      text-decoration: none;
+      &:hover {
+        background-color: $green;
+        color: $white;
+      }
+    }
+    &.medium {
+      padding: $f16 $f26;
+      border-radius: $f34;
+      &.subscribe-now {
+        &:hover {
+          .b-follow {
+            background-color: $green;
+            color: $white;
+          }
+        }
+      }
+      &.subscribed {
+        background-color: #1BE5A8;
+        color: white;
+        .b-follow {
+          display: none;
+        }
+        .b-unfollow {
+          display: block;
+        }
+      }
+      .b-follow {
+        text-transform: uppercase;
+        font-family: ProximaNovaBold, sans-serif;
+        color: $green;
+        border-color: $green;
+        text-decoration: none;
+        font-size: $f21;
+        &:hover {
+          background-color: $green;
+          color: $white;
+        }
+      }
+      .b-unfollow {
+        display: none;
+        text-transform: uppercase;
+        font-family: ProximaNovaBold, sans-serif;
+        border-color: $green;
+        text-decoration: none;
+        background-color: #1BE5A8;
+        font-size: $f21;
+        color: white;
+        &:hover {
+          background-color: $green;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.block-text-details {
+  margin-bottom: $f26;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .block-details-title {
+    font-size: $f26;
+    margin-bottom: $f16;
+    font-weight: bold;
+
+  }
+  .block-details-body {
+    font-size: $f16;
+    line-height: 1.2;
+  }
+}
+
+.gallery-link {
+  margin-bottom: $f34;
+  margin-top: -$f16;
+  a {
+    font-size: $f21;
+    color: $red;;
+  }
+}
+
+}

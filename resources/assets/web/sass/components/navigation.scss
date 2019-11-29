@@ -1,0 +1,232 @@
+
+.nav-section {
+  position:fixed;
+  width:100%;
+  z-index:5;
+  top:0;
+  left:0;
+  z-index: 10;
+
+  nav {
+    background-color: $black;
+    li {
+      a {
+        color: $gray;
+        height: $f68;
+        font-family: ProximaNovaBold, sans-serif;
+      }
+    }
+
+    .main-hover{
+      display: none;
+    }
+    .mobile-logo, .left-mob-menu {
+      display: none;
+    }
+    .logo {
+      height: $f68;
+      line-height: $f68;
+      display: inline-flex;
+      align-items: center;
+      /*margin-right: $f26;
+      border-right: 1px solid $darkgray;*/
+      img {
+        vertical-align: middle;
+        height: $f42;
+      }
+      &:hover .main{
+        /*background-color: $black-hover - 20;
+        transition: all 0.03s ease;*/
+
+        display: none;
+      }
+      &:hover .main-hover{
+        display: inline-block;
+      }
+    }
+    .language{
+      display: inline-block;
+      background-color: $lowblack;
+      transition: all 0.03s ease;
+      width: $f68;
+      height: $f68;
+      line-height:$f68;
+      cursor: pointer;
+      font-family: ProximaNovaBold, sans-serif;
+      color:$gray;
+      text-align: center;
+      margin-right: fn-w(23);
+      span {
+        font-size: $f21;
+      }
+      &:hover{
+        background-color: $black-hover - 20;
+        transition: all 0.03s ease;
+        span {
+          color: $white;
+        }
+      }
+
+      ul {
+        position: absolute;
+        top: 0;
+        width: $f68;
+        line-height: $f68;
+        background-color: $lowblack;
+        li {
+          a {
+            font-size: $f21;
+            text-decoration:none;
+          }
+          &.active,
+          &:hover {
+            background-color: $black-hover - 20;
+            transition: all 0.03s ease;
+            a {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+
+    .nav-bar {
+
+      a {
+        color: $gray;
+        font-size: $f16;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-decoration: none;
+        margin-left: fn-w(23);
+        margin-right: fn-w(23);
+        line-height: $f68; //conflict with mobile. Please, specify normal selector
+        &:hover{
+          color: $white;
+        }
+        &.active{
+          color: $green;
+        }
+        &.add-product-btn {
+          line-height: $f42;
+          height: $f42;
+          margin-top: $f13;
+        }
+      }
+    }
+
+    ul.submenu{
+      display: none;
+      list-style: none;
+      background-color: #e4e4e4;
+      position: absolute;
+      border-radius: $f5;
+      width: fn-w(222);
+      border: fn-w(1) solid #ccc;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      z-index: 999;
+      left: 0;
+      margin-top: fn-w(1);
+      li{
+        display: block;
+        text-align: center;
+        border-bottom: fn-w(1) solid #ccc;
+        &:last-child{
+          border-bottom: 0;
+        }
+        a{
+          font-size: $f18;
+          color: $black;
+          margin: 0;
+          width: fn-w(222);
+          text-transform: uppercase;
+          text-decoration: none;
+          font-weight: bold;
+          &:hover{
+            color: $black;
+            text-decoration: underline;
+          }
+
+        }
+        a.as-block{
+          display: block;
+        }
+      }
+    }
+
+
+    .add-product-logged {
+      font-family: ProximaNovaBold, sans-serif;
+      font-size:$f16;
+      height:$f68;
+      line-height:$f68;
+      display:inline-block;
+      padding:0 $f34;
+      color:$white;
+      margin:0 !important;
+      background-color: $lowblack;
+      &:hover {
+        color:$green !important;
+        background-color: $black-hover - 21;
+      }
+    }
+
+
+    .purchases {
+      height: $f68;
+      display: inline-block;
+      transition: all 0.05s ease;
+      .right-mob-menu {
+        display: none;
+      }
+      img {
+        width: $f68;
+        height: $f68;
+        &:hover {
+          background-color: $black-hover - 20;
+          transition: all 0.03s ease;
+        }
+      }
+
+      .cart-open {
+        position:relative;
+        font-size: $f21;
+        padding-right: $f21;
+        line-height:$f68;
+        height:$f68;
+        display:inline-block;
+        font-family: AcrobatBold, sans-serif;
+        color:$white;
+        cursor:pointer;
+        span {
+          font-family: AcrobatBold, sans-serif;
+          color:$white;
+          font-size:$f16;
+          vertical-align: bottom;
+        }
+        &:hover {
+          background-color: $black-hover - 20;
+        }
+      }
+
+    }
+  }
+
+  .nav-inverse {
+    background-color: white;
+    color: $gray;
+    font-family: ProximaNovaBold, sans-serif;
+    .nav-bar {
+      a {
+        color: $gray;
+        font-size: $f16;
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+  }
+}
+
+

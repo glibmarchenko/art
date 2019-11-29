@@ -1,0 +1,207 @@
+/*
+  Color variables regular and hover
+ */
+$blue: #63D8FF;
+$facebook: #2a5297;
+$green: #1BE5A8;
+$black: #23232D;
+$lowblack: #2e2e38;
+$mediumblack: #282832;
+$lightblack: #393942;
+$red: #FF806C;
+$google: #dc4e42;
+$gray: #919196;
+$darkgray: #34343d;
+$lightgray: #f8f7f5;
+$lowlightgray: #ebebe6;
+$white: #fff;
+$lowwhite: #f5f5f0;
+$lowgray: #7e7e84;
+$color-c8: #c8c8c8;
+$mediumgray: #646464;
+$cararra: #eaeae5;
+
+$black-hover: #575766;
+
+$mobile: 320px;
+$tablet: 320px;
+$small: 700px;
+$medium: 1366px;
+$large: 1680px;
+
+$available-colors: (
+    'blue': $blue,
+    'green': $green,
+    'red': $red,
+);
+
+/*
+  Fibonacci shortcuts for vw
+ */
+
+$numbers-list: 1, 2, 3, 5, 8, 13, 16, 21, 26, 34, 42, 55, 68, 89, 110, 144, 178, 233, 288, 377, 466, 610, 754, 987, 1220, 1597;
+
+$desktop-size: 1920;
+$mobile-size: 1080;
+
+$f5: .26vw;
+$f8: .416vw;
+$f10: .52vw;
+$f13: .677vw;
+$f16: .833vw;
+$f18: .933vw;
+$f21: 1.093vw;
+$f26: 1.354vw;
+$f34: 1.77vw;
+$f42: 2.187vw;
+$f55: 2.864vw;
+$f68: 3.541vw;
+$f89: 4.635vw;
+$f110: 5.729vw;
+$f144: 7.5vw;
+$f178: 9.27vw;
+$f233: 12.135vw;
+$f288: 15vw;
+$f400: 20.833vw;
+$f480: 30vw;
+
+/* Multiselect Variables */
+
+$color1: $white;
+$color2: $green;
+$color3: #35495e;
+$color4: $lightgray;
+$color5: $gray;
+$color6: $lightgray;
+$color7: #f3f3f3;
+$color8: $red;
+
+$spinnerBg: $color1;
+$spinnerBorderColor: $color2;
+
+$multiselectColor: $black;
+$multiselectBg: $color1;
+$multiselectBorderColorHover: darken($color4, 10%);
+$multiselectBorderColorFocus: darken($color4, 25%);
+
+$multiselectTagsBgColor: $color1;
+$multiselectTagsBorder: $f5 solid $color4;
+$multiselectTagColor: $color1;
+$multiselectTagBgColor: $color2;
+$multiselectTagIconColor: darken($color2, 20%);
+$multiselectTagIconColorHover: darken($color2, 8%);
+$multiselectTagIconColorBgHover: $color1;
+
+$multiselectCurrentBorderColor: $color4;
+$multiselectBorderColor: $color5;
+$multiselectColor: $black;
+
+$multiselectPlaceholderColor: $black;
+$multiselectContentBgColor: $color1;
+$multiselectContentBorderColor: $color4;
+
+$multiselectOptionHighlightBgColor: $color2;
+$multiselectOptionHighlightColor: $color1;
+$multiselectOptionSelectedBgColor: $color7;
+$multiselectOptionSelectedColor: $color3;
+$multiselectOptionHighlightSelectedBgColor: $color8;
+$multiselectOptionHighlightSelectedColor: $color1;
+$multiselectDisabledBgColor: darken($color1, 7%);
+$multiselectDisabledColor: darken($color1, 35%);
+$multiselectDisabledOptionBgColor: darken($color2, 3%);
+
+$multiselectTagIcon: "\00D7";
+$multiselectTagsBorderRadius: $f5;
+
+
+@import 'reset';
+@import 'helpers';
+@import 'mixins';
+@import 'buttons';
+@import 'scrollbar';
+@import 'modal';
+@import 'filterbar';
+@import 'transitions';
+@import 'assets/core';
+@import 'assets/card';
+@import 'assets/zoom';
+@import 'assets/ns-style-bar';
+
+@import 'components/menu';
+@import 'components/navigation';
+@import 'components/notification';
+@import 'components/prints-layout';
+@import 'components/galleries';
+@import 'components/purchase-product';
+@import 'components/images-upload';
+@import 'components/picture-upload';
+@import 'components/form-section';
+@import 'components/subscription-navigation';
+@import 'components/main-content-heading';
+
+@import 'components/trash';
+@import 'components/multiselect';
+
+@import 'components/create-product';
+
+@import 'pages/purchase-cart';
+@import 'pages/author';
+@import 'pages/registration';
+@import 'pages/home';
+@import 'pages/register';
+@import 'pages/settings';
+@import 'pages/create_item';
+@import 'pages/cart';
+@import 'pages/user_finance';
+@import 'pages/gallery';
+@import 'pages/subscriptions';
+@import 'pages/gallery-show';
+@import 'pages/orders';
+@import 'footer';
+//@import 'components/vue-dropdowns';
+$animationDuration: 0.5s;
+@import "~vue2-animate/src/sass/vue2-animate.scss";
+
+*, *:before, *:after {
+  box-sizing: border-box !important;
+}
+
+*:focus {
+  outline: 0;
+}
+
+.phpdebugbar {
+  font-size: $f13;
+
+  * {
+    font-size: $f13;
+  }
+}
+
+html, body {
+  font-family: AcrobatRegular, sans-serif;
+  color: $black;
+  background-color: $lightgray;
+  width: -webkit-calc(100% - 0px);
+  //overflow-y:hidden;
+  * {
+    font-size: 0;
+  }
+  /* Change the white to any color ;) */
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px $lightgray inset;
+  }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */
+{
+  opacity: 0;
+}
+
+/* end */
+
+

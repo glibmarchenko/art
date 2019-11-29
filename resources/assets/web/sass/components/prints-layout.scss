@@ -1,0 +1,187 @@
+#main-content {
+  height: calc(100vh);
+  overflow: auto;
+}
+
+.noFilterLayout {
+  margin-top: 0 !important;
+  overflow-y: visible !important;
+  .wrapper {
+    padding: 0 $f55 $f55 $f55;
+  }
+  .pic-content-block {
+    width: calc(33% - #{$f16} * 2);
+  }
+}
+
+.pagination-container {
+  display:block;
+  position:relative;
+  width:100%;
+  height:$f144;
+  margin-bottom:$f178;
+  .pagination {
+    @include centerer();
+    * {
+      font-family: AcrobatBold, sans-serif;
+      background:none;
+      font-size: $f21;
+      border:none !important;
+    }
+  }
+  .page-link {
+    background:none !important;
+    color:$black !important;
+    padding:0 !important;
+    height:$f55 !important;
+    width:$f55 !important;
+    float:none !important;
+    display:inline-block !important;
+    line-height:$f55 !important;
+    text-align: center !important;
+  }
+  .active {
+    .page-link {
+      background:$black !important;
+      color:$white !important;
+    }
+  }
+}
+
+.wrapper {
+  position: relative;
+  padding: $f89;
+  padding-top: 0;
+  background-color: $lightgray;
+  vertical-align: baseline;
+  font-size: 0;
+  h1 {
+    font-size: $f34;
+    color: $black;
+  }
+}
+
+#columns {
+  margin-left: -$f16;
+  margin-right: -$f16;
+}
+
+.list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.list-enter-active, .list-leave-active {
+  transition: all 0.32s;
+}
+
+.list-enter, .list-leave-to {
+  opacity: 0;
+  transform: translateY(-32px);
+}
+
+.pic-content-block {
+  display: inline-block;
+  width: calc(25% - #{$f16} * 2);
+  margin-left: $f16;
+  margin-right: $f16;
+  -webkit-column-break-inside: avoid;
+  -webkit-backface-visibility: hidden;
+  margin-bottom: $f34;
+  background-color: $white;
+
+  padding: $f5;
+  color: $gray;
+  position: absolute;
+  left: calc(50vw - 350px);
+  top: 100vh;
+  hr {
+    border: 0;
+    height: 0;
+    margin-top: $f16;
+    margin-bottom: $f16;
+    border-bottom: 2px solid $lightgray;
+  }
+  .pic-description-container {
+    padding: $f16;
+  }
+  figure {
+    overflow: hidden;
+  }
+  .pic-image {
+    width: 100%;
+    -webkit-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    &:hover {
+      -webkit-transform: scale3d(1.05, 1.05, 1);
+      transform: scale3d(1.05, 1.05, 1);
+    }
+  }
+
+  .pic-author {
+    margin-bottom: $f8;
+    a {
+      color: $black;
+      font-family: AcrobatBold, sans-serif;
+      font-size: $f26;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+
+    }
+  }
+  .pic-name {
+    font-family: AcrobatRegular, sans-serif;
+    font-size: $f26;
+    margin-bottom: $f8;
+  }
+  .pic-size {
+    font-family: AcrobatRegular, sans-serif;
+    font-size: $f21;
+  }
+  .pic-type {
+    display: inline-block;
+    font-family: AcrobatBold, sans-serif;
+    font-size: $f21;
+    line-height: $f34;
+    color: $red;
+    text-transform: uppercase;
+    span {
+      color: $gray;
+      font-family: AcrobatBold, sans-serif;
+      font-size: $f21;
+      line-height: $f34;
+      text-transform: uppercase;
+    }
+    &.obj-2 {
+      color: $green !important;
+    }
+    &.obj-3 {
+      color: $blue !important;
+    }
+  }
+  .pic-price {
+    display: inline-block;
+    font-family: AcrobatBold, sans-serif;
+    font-size: $f34;
+    line-height: $f34;
+    float: right;
+    .small {
+      font-size: $f21;
+      font-family: AcrobatBold, sans-serif;
+      vertical-align: bottom;
+      display: inline-block;
+      margin-bottom: -$f5;
+    }
+  }
+  .sold {
+    display: inline-block;
+    font-family: AcrobatBold, sans-serif;
+    font-size: $f21;
+    line-height: $f34;
+    float: right;
+  }
+}

@@ -1,0 +1,218 @@
+/*
+  Color variables regular and hover
+ */
+$blue: #63D8FF;
+$facebook: #2a5297;
+$green: #1BE5A8;
+$black: #23232D;
+$lowblack: #2e2e38;
+$mediumblack: #282832;
+$red: #FF806C;
+$google: #dc4e42;
+$gray: #6e6e73;
+$darkgray: #34343d;
+/*$lightgray: #EBEBE6;*/
+$lightgray: #f8f7f5;
+$lowlightgray: #ebebe6;
+$white: #FFFFFF;
+$lowwhite: #f5f5f0;
+$lowgray: #7e7e84;
+$color-c8: #c8c8c8;
+
+$black-hover: #575766;
+
+/*
+  Fibonacci shortcuts for vw
+ */
+$f5: 0.260vw;
+$f8: 0.416vw;
+$f10: 0.520vw;
+$f13: 0.677vw;
+$f16: 0.833vw;
+$f18: 0.933vw;
+$f21: 1.093vw;
+$f26: 1.354vw;
+$f34: 1.770vw;
+$f42: 2.187vw;
+$f55: 2.864vw;
+$f68: 3.541vw;
+$f89: 4.635vw;
+$f110: 5.729vw;
+$f144: 7.5vw;
+$f178: 9.270vw;
+$f233: 12.135vw;
+$f288: 15vw;
+$f400: 20.833vw;
+$f480: 30vw;
+
+/* Multiselect Variables */
+
+$color1: $white;
+$color2: $green;
+$color3: #35495E;
+$color4: $lightgray;
+$color5: $gray;
+$color6: $lightgray;
+$color7: #F3F3F3;
+$color8: $red;
+
+$spinnerBg: $color1;
+$spinnerBorderColor: $color2;
+
+$multiselectColor: $black;
+$multiselectBg: $color1;
+$multiselectBorderColorHover: darken($color4, 10%);
+$multiselectBorderColorFocus: darken($color4, 25%);
+
+$multiselectTagsBgColor: $color1;
+$multiselectTagsBorder: $f5 solid $color4;
+$multiselectTagColor: $color1;
+$multiselectTagBgColor: $color2;
+$multiselectTagIconColor: darken($color2, 20%);
+$multiselectTagIconColorHover: darken($color2, 8%);
+$multiselectTagIconColorBgHover: $color1;
+
+$multiselectCurrentBorderColor: $color4;
+$multiselectBorderColor: $color5;
+$multiselectColor: $black;
+
+$multiselectPlaceholderColor: $black;
+$multiselectContentBgColor: $color1;
+$multiselectContentBorderColor: $color4;
+
+$multiselectOptionHighlightBgColor: $color2;
+$multiselectOptionHighlightColor: $color1;
+$multiselectOptionSelectedBgColor: $color7;
+$multiselectOptionSelectedColor: $color3;
+$multiselectOptionHighlightSelectedBgColor: $color8;
+$multiselectOptionHighlightSelectedColor: $color1;
+$multiselectDisabledBgColor: darken($color1, 7%);
+$multiselectDisabledColor: darken($color1, 35%);
+$multiselectDisabledOptionBgColor: darken($color2, 3%);
+
+$multiselectTagIcon: "\00D7";
+$multiselectTagsBorderRadius: $f5;
+
+@import 'default/helpers.scss';
+@import 'default/mixins.scss';
+@import 'default/buttons.scss';
+@import 'default/scrollbar.scss';
+@import 'default/transitions';
+
+*, *:before, *:after {
+  box-sizing: border-box !important;
+}
+
+.red {
+  color:$red;
+}
+.green {
+  color: $green;
+}
+.blue {
+  color:$blue;
+}
+
+.btn {
+  height:auto !important;
+  line-height:normal !important;
+}
+* {
+  font-family: Roboto, sans-serif;
+}
+
+.avatar-with-details {
+  width:fnW(330);
+  text-align: left;
+  position:relative;
+  height:$f178;
+  border-bottom:2px solid $lowlightgray;
+
+  &:last-of-type {
+    border-bottom:none;
+  }
+  .admin-item-avatar {
+    position:relative;
+    display:inline-block;
+    margin:0;
+    @include vertical-centerer();
+     img {
+       margin:0;
+     }
+  }
+  .details {
+    margin-left:$f13;
+    @include vertical-centerer();
+    display:inline-block;
+    position:absolute;
+    left:$f144;
+    top:$f89;
+    small {
+      opacity: 0.64;
+    }
+  }
+}
+.price-table-cell {
+  text-align: left;
+  position:relative;
+  height:$f178;
+  &:last-of-type {
+    border-bottom:none;
+  }
+  .content {
+    @include vertical-centerer();
+    p {
+      margin-bottom:$f5;
+      font-size:$f13 !important;
+      small {
+        font-size:$f8;
+        vertical-align: bottom;
+        line-height:$f16;
+        opacity:0.87;
+      }
+      &.bold {
+        font-weight:bold;
+      }
+    }
+  }
+}
+
+.statuses {
+  div {
+    display:block;
+    border:2px solid $lowlightgray;
+    width:$f144;
+    text-align: center;
+    border-radius:$f13;
+    color:$black;
+    height:$f34;
+    line-height:$f34;
+    padding:0 $f21;
+    cursor:pointer;
+
+    margin:$f5 $f5;
+    &.danger {
+      background-color: rgba(205, 92, 92, 0.32);
+      border:2px solid indianred;
+      &:hover {
+        background-color: indianred;
+        border:2px solid indianred;
+      }
+    }
+    &:hover {
+      color:$white;
+      background-color: $green;
+      border:2px solid #1BD094;
+    }
+    &.active {
+      color:$white;
+      background-color: $gray;
+      border:2px solid $gray;
+      &:hover {
+        color:$white;
+        background-color: $gray;
+        border:2px solid $gray;
+      }
+    }
+  }
+}

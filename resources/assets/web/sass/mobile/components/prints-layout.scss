@@ -1,0 +1,72 @@
+@import '../../components/prints-layout';
+@media screen and (max-width: 700px) {
+
+    .wrapper{
+      padding: $f34;
+      padding-top: 0;
+      #columns{
+        margin-left: -$f16;
+        margin-right: -$f16;
+      }
+    }
+  #main-content{
+    height: auto;
+  }
+  .noFilterLayout {
+    .wrapper{
+      padding: $f34;
+      padding-top: 0;
+      #columns{
+        margin-left: -$f16;
+        margin-right: -$f16;
+      }
+    }
+    .pic-content-block{
+      width: calc(50% - #{$f34} );
+      margin-left: $f16;
+      margin-right: $f16;
+      padding: $f8;
+    }
+  }
+    .pic-content-block{
+      width: calc(50% - #{$f34} );
+      margin-left: $f16;
+      margin-right: $f16;
+      padding: $f8;
+      .pic-description-container {
+        padding-bottom: 0;
+      }
+      hr{
+        border-bottom: $f2 solid #f8f7f5;
+        margin-top: $f34;
+        margin-bottom: $f34;
+      }
+      .pic-author{
+        margin-top: $f26;
+        display: block;
+        a{
+          font-size: $f42;
+          font-family: AcrobatExtraBold, sans-serif;
+          text-transform: uppercase;
+        }
+      }
+      .pic-name, .pic-size{
+        margin-top: $f16;
+        font-size: $f42;
+      }
+      .pic-type, .pic-price{
+        font-size: $f34;
+        margin-bottom: $f34;
+        span{
+          font-size: $f34;
+        }
+      }
+      .pic-price{
+        .small{
+          font-size: $f21;
+          margin-bottom: -$f5;
+        }
+      }
+    }
+
+}

@@ -1,0 +1,12 @@
+@import '../../components/subscription-navigation';
+
+@media screen and (max-width: 700px) {
+  #subscription-navigation {
+    top: $f144;
+    height: $f144;
+    div {
+      font-size: $f34;
+      line-height: $f144;
+    }
+  }
+}

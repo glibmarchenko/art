@@ -1,0 +1,29 @@
+#subscription-navigation, .second-menu {
+  height:$f68;
+  background-color:$white;
+  position:fixed;
+  left:0;
+  top:$f68;
+  text-align:center;
+  width:100%;
+  z-index:4;
+  overflow:hidden;
+  div {
+    line-height:$f68;
+    margin:0 $f21;
+    display:inline-block;
+    font-size: $f21;
+    font-family: ProximaNovaBold,sans-serif;
+    color: $gray;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover{
+      color: $black;
+    }
+    &.active{
+      border-bottom: 5px solid $black;
+      color: $black;
+      box-sizing:content-box;
+    }
+  }
+}

@@ -1,0 +1,171 @@
+
+/* MENU section */
+
+.menu-section{
+  display: none;
+  position: fixed;
+  top: $f68;
+  right: 0;
+  width: fn-w(482);
+  z-index: 88;
+  bottom: 0;
+  background-color: $black;
+  ul{
+    list-style: none;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    li{
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 0;
+      a{
+        font-size: $f26;
+        font-family: ProximaNovaBold;
+        color: $gray;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        padding: $f16;
+
+        &:hover{
+          color: $white;
+        }
+      }
+      &:hover{
+        background-color: rgba(255,255,255,0.08);
+      }
+
+    }
+  }
+}
+
+.menu-sandwich{
+  /*border: 2px solid white;*/
+  display:inline-block;
+  position: relative;
+  border-left: 1px solid $darkgray;
+  height:$f68;
+  &:hover{
+    background-color: #434352;
+  }
+  &.opened {
+    .profile-avatar-icon {
+      //opacity: 0;
+    }
+  }
+  .my-cabinet {
+    width:$f233;
+    height:$f68;
+    line-height:$f68;
+    font-size:$f16;
+    color:$white;
+    text-decoration: none;
+    padding:0 $f21;
+    text-align: center;
+    margin:0;
+    font-family: ProximaNovaBold, sans-serif;
+    text-transform: uppercase;
+
+  }
+  .profile-avatar-icon{
+    position: relative;
+    display:inline-block;
+    /*border-radius: 200px;*/
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    img{
+      border-left: 0!important;
+    }
+    &.gallery-icon {
+      img {
+        height:$f68;
+        width:auto !important;
+      }
+    }
+  }
+}
+.menu-sandwich.active{
+  background-color: transparent;
+  position: fixed;
+  top: fn-w(55);
+  right: fn-w(55);
+}
+
+.menu-trigger {
+  width: fn-w(35);
+  height: fn-w(29);
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: top;
+  margin: fn-w(20) 0;
+  margin-right:$f21;
+  opacity:1;
+  &.cart-close {
+    position:absolute;
+    left:$f16;
+    top:0;
+  }
+}
+.menu-trigger .line {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: fn-w(2);
+  background: $gray;
+}
+
+.menu-trigger.second {
+  transition: all 0.5s 0s;
+}
+.menu-trigger.second .line {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: fn-w(2);
+  background: $gray;
+  transition: 0.3s;
+}
+.menu-trigger.second .line.line-1 {
+  transition: all 0.3s 0.3s, transform 0.3s 0s;
+}
+.menu-trigger.second .line.line-2 {
+  top: 50%;
+  margin-top: -1px;
+  left: 0;
+  transition: all 0.3s 0.3s;
+}
+.menu-trigger.second .line.line-3 {
+  bottom: 0;
+  top: auto;
+  left: 0;
+  transition: all 0.3s 0.3s, transform 0.3s 0s;
+}
+.menu-trigger.second.active {
+  opacity:1;
+  transform: rotate(135deg);
+  transition: all 0.5s 0.3s;
+}
+.menu-trigger.second.active .line{
+  background: #e6e6e6;
+}
+.menu-trigger.second.active .line-1 {
+  top: 50%;
+  margin-top: -1px;
+  transform: rotate(90deg);
+  transition: all 0.3s, transform 0.3s 0.3s;
+}
+.menu-trigger.second.active .line-2 {
+  opacity: 0;
+  transition: all 0.3s, opacity 0.3s 0s;
+}
+.menu-trigger.second.active .line-3 {
+  bottom: 50%;
+  margin-bottom: -1px;
+  transform: rotate(0deg);
+  transition: all 0.3s, transform 0.3s 0.3s;
+}
+
+/* end MENU section*/

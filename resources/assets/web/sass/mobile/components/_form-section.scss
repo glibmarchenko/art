@@ -1,0 +1,7 @@
+@import '../../components/form-section';
+
+@media screen and (max-width: 700px) {
+  .multiselect__input, .multiselect__single {
+    line-height: $f110 !important;
+  }
+}

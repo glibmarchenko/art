@@ -1,0 +1,58 @@
+@font-face {
+    font-family: UniNeueBlack;
+    src: url("UniNeue/UniNeueBlack.otf") format("opentype");
+}
+@font-face {
+    font-family: UniNeueBlackIt;
+    src: url("UniNeue/UniNeueBlack-Italic.otf") format("opentype");
+}
+@font-face {
+    font-family: UniNeueBold;
+    src: url("UniNeue/UniNeueBold.otf") format("opentype");
+}
+@font-face {
+    font-family: UniNeueBoldIt;
+    src: url("UniNeue/UniNeueBold-Italic.otf") format("opentype");
+}
+@font-face {
+    font-family: UniNeueBook;
+    src: url("UniNeue/UniNeueBook.otf") format("opentype");
+}
+@font-face {
+    font-family: UniNeueBookIt;
+    src: url("UniNeue/UniNeueBook-Italic.otf") format("opentype");
+}
+@font-face {
+    font-family: UniNeueHeavy;
+    src: url("UniNeue/UniNeueHeavy.otf") format("opentype");
+}
+@font-face {
+    font-family: UniNeueHeavyIt;
+    src: url("UniNeue/UniNeueHeavy-Italic.otf") format("opentype");
+}
+@font-face {
+    font-family: UniNeueLight;
+    src: url("UniNeue/UniNeueLight.otf") format("opentype");
+}
+@font-face {
+    font-family: UniNeueLightIt;
+    src: url("UniNeue/UniNeueLight-Italic.otf") format("opentype");
+}
+@font-face {
+    font-family: UniNeueRegular;
+    src: url("UniNeue/UniNeueRegular.otf") format("opentype");
+}
+@font-face {
+    font-family: UniNeueRegularIt;
+    src: url("UniNeue/UniNeueRegular-Italic.otf") format("opentype");
+}
+@font-face {
+    font-family: UniNeueThin;
+    src: url("UniNeue/UniNeueThin.otf") format("opentype");
+}
+@font-face {
+    font-family: UniNeueThinIt;
+    src: url("UniNeue/UniNeueThin-Italic.otf") format("opentype");
+}
+
+

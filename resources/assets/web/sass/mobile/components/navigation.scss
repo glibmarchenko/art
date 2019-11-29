@@ -1,0 +1,189 @@
+@import '../../components/navigation';
+
+@media screen and (max-width: 700px) {
+  .nav-section {
+    nav {
+      .logo {
+        display: none;
+      }
+      .left-mob-menu {
+        //display: inline-block;
+        display: flex;
+        align-items: center;
+        float: left;
+        height: $f144;
+        width: $f144;
+        line-height: $f144;
+        border-right: 1px solid rgba(255, 255, 255, 0.08);
+        text-align: center;
+        .menu-trigger {
+          width: $f55;
+          height: $f55;
+          position: relative;
+          cursor: pointer;
+          display: inline-block;
+          vertical-align: middle;
+          margin: 0 auto;
+          //margin-top: $f42;
+          opacity: 1;
+          //transform: translate(0, -50%);
+          //top: 50%;
+          .line {
+            height: $f3;
+            background: #fff;
+          }
+        }
+      }
+      .mobile-logo {
+        height: $f144;
+        width: calc(100% - (#{$f288}) * 2);
+        border-left: 1px solid rgba(255, 255, 255, 0.08);
+        border-right: 1px solid rgba(255, 255, 255, 0.08);
+        display: inline-block;
+        img {
+          height: $f144;
+          display: table;
+          margin: 0 auto;
+        }
+      }
+      .list-inline {
+        display: none;
+        &.pull-right {
+          line-height: $f144;
+          width: $f288;
+          vertical-align: middle;
+          display: inline-block;
+          li:first-child {
+            display: none;
+          }
+          li {
+            width: $f288;
+            text-align: center;
+          }
+          a {
+            width: $f288;
+            vertical-align: middle;
+            font-size: $f34;
+          }
+        }
+        &.left-menu {
+          width: 100%;
+          height: 100%;
+          display: none;
+          position: fixed;
+          background: $black;
+          li {
+            display: block;
+            text-align: center;
+            height: $f144;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            a {
+              font-size: $f55;
+              height: 13.3vw;
+              line-height: 13.3vw;
+              width: 100%;
+            }
+          }
+          li:last-child {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+          }
+        }
+      }
+      .language {
+        width: $f144;
+        height: $f144;
+        line-height: $f144;
+        background: none;
+        margin-right: 0;
+        span {
+          font-size: $f55;
+        }
+        &:hover {
+          background-color: $black-hover - 20;
+          transition: all 0.03s ease;
+          span {
+            color: $white;
+          }
+        }
+
+        ul {
+          position: absolute;
+          top: 0;
+          width: $f144;
+          line-height: $f144;
+          background-color: $lowblack;
+          li {
+            a {
+              font-size: $f55;
+              text-decoration: none;
+            }
+            &.active,
+            &:hover {
+              background-color: $black-hover - 20;
+              transition: all 0.03s ease;
+              a {
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+      .purchases {
+        .cart-open {
+          font-size: 0;
+          width: $f144;
+          height: $f144;
+          padding-right: 0;
+          border-right: 1px solid rgba(255, 255, 255, 0.08);
+          #cart-icon {
+            width: $f144;
+            height: $f144;
+          }
+          span {
+            font-size: 0;
+          }
+        }
+
+        .menu-sandwich {
+          border-left: 0;
+          &:hover {
+            background: $black;
+          }
+
+          .menu-trigger {
+            display: none;
+          }
+        }
+        .right-mob-menu {
+          display: block;
+          width: $f144;
+          height: $f144;
+          font-size: $f144;
+          line-height: $f55;
+          color: #fff;
+          text-align: center;
+          &.active {
+            color: $red;
+          }
+        }
+      }
+    }
+    .show-notifications, .profile-avatar-icon, .my-cabinet {
+      display: none;
+    }
+  }
+  .menu-section {
+    top: $f144;
+    width: 100%;
+    ul {
+      li {
+        a {
+          font-size: $f55;
+          text-transform: uppercase;
+          height: $f144;
+          line-height: $f144;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.create-product {
+  .loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left:0;
+    top:0;
+    z-index:999999;
+    background:url('/web/images/ui/oval.svg') no-repeat center;
+    background-color: rgba(10,10,10,0.5);
+    &.percentageLoader {
+      background:none;
+      background-color: rgba(10,10,10,0.5);
+    }
+    h1 {
+      color:$white;
+      font-size:$f68;
+      font-family: UniNeueBold, sans-serif;
+      opacity:0.68;
+      @include centerer();
+    }
+  }
+  
+  .hide {
+    opacity: 0;
+    display:block !important;
+  }
+  
+  .multiselect {
+    background-color:$white;
+    .multiselect__tags {
+      background-color:$white;
+    }
+    .multiselect__input {
+      background-color:$white;
+    }
+    .multiselect__select {
+      background-color:$white;
+    }
+  }
+
+  label{
+    text-align: left;
+    font-family: AcrobatRegular,sans-serif;
+    display: block;
+    font-size: 0.833vw;
+    color: $lowgray;
+    margin-bottom: 0.677vw;
+    line-height: 0.833vw;
+    span {
+      font-size: 0.833vw;
+    }
+    b {
+      font-size: 0.833vw;
+      font-family:AcrobatBold, sans-serif;
+      color:$black;
+    }
+  }
+}

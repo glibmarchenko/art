@@ -1,0 +1,23 @@
+.main-content-heading {
+  > h1 {
+    margin-left:$f89;
+    font-size: $f42;
+    font-family: UniNeueBold, sans-serif;
+    margin-bottom: $f16;
+    .d-b{
+      display: none;
+    }
+  }
+
+  > h2 {
+    margin-left:$f89;
+    font-size: $f26;
+    font-family: UniNeueRegular, sans-serif;
+    margin-bottom: $f34;
+  }
+
+  &.top-sp-68, &.top-sp-68x2 {
+    @include top-space;
+  }
+  
+}

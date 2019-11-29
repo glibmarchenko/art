@@ -1,0 +1,141 @@
+@import '../../pages/gallery-show';
+@media screen and (max-width: 700px) {
+  #gallery-show{
+    margin-top: $f144;
+    .main-content-heading.top-sp-68x2{
+      margin-top: 0;
+      padding-top: 0;
+      h1{
+        margin-top: $f89;
+        margin-bottom: $f55;
+      }
+    }
+    section.title-bar{
+      padding: 0 $f34;
+      height: $f233;
+      padding-bottom: 0;
+      .title{
+        h1{
+          font-size: $f55;
+          font-family: AcrobatExtraBold, sans-serif;
+          margin-bottom: $f5;
+        }
+        h2{
+          font-size: $f42;
+        }
+      }
+      .navigation{
+        display: none;
+      }
+    }
+    section.authors-bar{
+      display: none;
+      background: none;
+      padding: $f89 $f34;
+      border-bottom: $f2 solid #fff;
+      .header{
+        h2{
+          font-family: UniNeueBold;
+          font-size: $f55;
+          margin-bottom: $f55;
+        }
+        .navigation{
+          .show-more-authors-button{
+            display: none;
+          }
+        }
+      }
+      .authors-small-list{
+        max-height: none;
+        overflow: auto;
+        margin-top: 0;
+        .author-single{
+          width: calc(50% - #{$f34});
+          height: auto;
+          background: #fff;
+          margin-left: $f16;
+          margin-right: $f16;
+          margin-bottom: $f34;
+          .author-avatar{
+            width: 100%;
+            //height: $f466;
+            height: calc((100vw - ((#{$f26}*3) + #{$f8}*4))/2);
+            overflow: auto;
+            border: $f8 solid #fff;
+            border-bottom: 0;
+          }
+          .author-description{
+            display: block;
+            width: 100%;
+            position: static;
+            transform: none;
+            h2{
+              text-transform: uppercase;
+              font-size: $f42;
+              font-family: AcrobatExtraBold, sans-serif;
+              margin-top: $f34;
+              margin-bottom: $f5;
+              margin-left: $f13;
+            }
+            h3{
+              font-size: $f42;
+              margin-bottom: $f34;
+              margin-left: $f13;
+            }
+          }
+        }
+      }
+    }
+    .gallery-items{
+      h2{
+        display: none;
+      }
+    }
+    #info-box{
+      position: static;
+      display: none;
+      background: none;
+      height: auto;
+      .gallery-about-container{
+        width: 100%;
+        height: auto;
+        position: static;
+        h2 {
+          margin-bottom:$f8;
+        }
+        .gallery-avatar{
+          display: none;
+        }
+        .gallery-description{
+          width: 100%;
+          height: auto;
+          padding-top: $f89;
+          padding-bottom: $f89;
+          h2, h3, .underline{
+            display: none;
+          }
+          p{
+            font-size: $f42;
+            line-height: $f42;
+          }
+          .gallery-links{
+            h4{
+              font-size: $f42;
+              font-family: UniNeueBold;
+              margin-bottom: $f55;
+            }
+            .gallery-link-box{
+              a{
+                font-size: $f42;
+              }
+            }
+          }
+        }
+      }
+    }
+    .compensated{
+        margin-top: 0;
+     }
+
+  }
+}

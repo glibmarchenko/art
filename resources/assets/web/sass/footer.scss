@@ -1,0 +1,122 @@
+.footer{
+  background-color: $black;
+  width: 100%;
+  padding: $f89 $f89 0 $f89;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  .block-container{
+    position: relative;
+    display: inline-block;
+    float: left;
+    .input-field {
+      display:inline-block;
+      height:$f68;
+      padding: 0 $f21 !important;
+      line-height:$f68;
+    }
+
+    .title {
+      &,
+      & a {
+        font-size: $f34;
+        font-family: UniNeueRegular;
+        color: $lowgray;
+        line-height: 1.2;
+        margin-bottom: $f16;
+      }
+    }
+    .simple-text,.simple-text>a{
+      font-size: $f21;
+      font-family: UniNeueBook, sans-serif;
+      color: $lowgray;
+      line-height: 1.2;
+      margin-bottom: $f68;
+      .input-50 {
+        display:inline-block;
+        height:$f68;
+        padding: 0 $f21 !important;
+        line-height:$f68;
+      }
+      .input-1 {
+        width:calc(50% - (#{$f21} / 2));
+      }
+      .input-2 {
+        width:calc(50% - (#{$f21} / 2));
+        margin-left:$f21;
+      }
+      a{
+        display: block;
+        margin-bottom: 0;
+        text-decoration: none;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .block-part-3{
+    width: 37.5%;
+    padding-right: 6.25%;
+  }
+  .block-part-2{
+    .mob-title{
+      display: none;
+    }
+    width: 25%;
+    img {
+      height:$f89;
+    }
+  }
+  .contact-form{
+    .form-block{
+      input,select,textarea,button,.select2,.select2-selection__rendered{
+        width: 100%;
+        font-size: $f26;
+        margin-bottom: $f26;
+        color: $lowgray;
+        background-color: $lowblack;
+        padding: $f21 $f34;
+        border: 0;
+        border-radius: $f5;
+        font-family: UniNeueBook;
+      }
+      .select2-selection--single{
+        background-color: $lowblack;
+        padding: 0;
+        border-right: 0;
+      }
+      .select2-selection__rendered{
+        padding: 0;
+
+      }
+      .select2{
+        width: 100%!important;
+        padding: 0 $f34;
+      }
+      .select2-selection__arrow{
+        background-color: rgba(255,255,255,0.38);
+      }
+      .textarea-field{
+        margin-bottom: 0;
+        resize: vertical;
+        height: fn-w(270);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      .send-form{
+        background-color: $mediumblack;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        font-size: $f21;
+        font-family: UniNeueBold;
+        text-transform: uppercase;
+        margin:0 !important;
+        &:hover{
+          background-color: $mediumblack+10;
+        }
+      }
+    }
+  }
+}

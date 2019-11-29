@@ -1,0 +1,29 @@
+@media screen and (max-width: 700px) {
+  .select2 {
+
+    .select2-selection {
+      padding-left: 0;
+      padding-right: 0;
+
+      .select2-selection__rendered {
+        font-size: $f55;
+        height: $f144;
+        line-height: $f144;
+        color: $lowgray;
+      }
+    }
+  }
+
+  .select2-container {
+
+    .select2-results__options {
+      border: 1px solid $cararra;
+
+      li {
+        height: $f144;
+        line-height: $f144;
+        font-size: $f55;
+      }
+    }
+  }
+}

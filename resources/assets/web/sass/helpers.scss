@@ -1,0 +1,45 @@
+* {
+  vertical-align: top;
+  box-sizing:border-box;
+}
+
+.pull-right {
+  float:right;
+}
+
+.list-inline {
+  display:inline-block;
+
+  li {
+    display:inline-block;
+  }
+}
+
+.pos-relative{
+  position: relative;
+}
+.tint-overlay {
+  -webkit-filter: grayscale; /*sepia, hue-rotate, invert....*/
+  -webkit-filter: brightness(50%);
+}
+.mob-navigation{
+  display: none;
+}
+
+@each $key, $color in $available-colors {
+  .text-fill-#{$key} {
+    color: $color;
+  }
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+@for $i from 1 through 99 {
+  @if $i % 5 == 0 {
+    .opacity-#{$i} {
+      opacity: '.#{$i}';
+    }
+  }
+}

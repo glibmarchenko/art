@@ -1,0 +1,211 @@
+#homepage {
+  margin-top:$f68;
+  .d-n {
+    font-size: $f21;
+  }
+  #header {
+    background-color: $white;
+    position:relative;
+    overflow:hidden;
+    height:$f233;
+     .logo {
+       display: inline-block;
+       width:$f480;
+       height:$f233;
+       text-align:center;
+       background:url('/web/images/logo_red.svg') no-repeat $f89 center;
+       background-size:$f288;
+
+     }
+    .slogan {
+      display: inline-block;
+      height:$f233;
+      p {
+        position:relative;
+        font-family: UniNeueBold, sans-serif;
+        font-size:$f34;
+        @include vertical-centerer();
+        span {
+          color:$red;
+          font-size:$f34;
+        }
+      }
+    }
+    .button-right {
+      float:right;
+      margin-right:$f89;
+      line-height:$f233;
+      .google-button {
+        width:$f55;
+        height:$f55;
+        border-radius:$f55;
+        background-color: $google;
+        padding:0;
+        text-align: center;
+        &:hover {
+          background-color: $google - 40;
+        }
+      }
+      .facebook-button {
+        width:$f55;
+        height:$f55;
+        border-radius:$f55;
+        background-color: $facebook;
+        border:2px solid $facebook + 20;
+        margin-left:$f21;
+        padding:0;
+        text-align: center;
+        &:hover {
+          background-color: $facebook - 40;
+        }
+      }
+    }
+  }
+  #main-content {
+    height:auto !important;
+  }
+  .main-content-heading {
+    position:relative;
+    .add-gallery {
+      position:absolute;
+      right:$f89;
+      bottom:0;
+    }
+  }
+  .gallery-about-container {
+    h2 {
+      margin-bottom:$f13;
+    }
+    p {
+      margin-bottom:$f21;
+    }
+  }
+  .galleries {
+    margin-top:0;
+  }
+
+}
+#landing-products {
+  .all-prints {
+    margin:0 auto;
+    margin-bottom:$f89;
+    text-align: center;
+  }
+}
+
+#banner {
+  height: fn-w(610);
+    background-color: $black;
+    position:relative;
+    .content {
+      text-align: center;
+      @include vertical-centerer();
+      h1 {
+        font-family: UniNeueBlack, sans-serif;
+        font-size:$f89;
+        color:$white;
+      }
+      h2 {
+        font-family: UniNeueBook, sans-serif;
+        font-size:$f55;
+        color:$white;
+        margin-bottom:$f89;
+      }
+      .c-green {
+        font-size:$f89;
+        color:$green;
+      }
+      .c-blue {
+        font-size:$f89;
+        color:$blue;
+      }
+
+    }
+}
+
+.book {
+  height: fn-w(610);
+  .page {
+    display:inline-block;
+    height: fn-w(610);
+    width:50%;
+    padding:0 $f89;
+    background-color: $white;
+    .content {
+      @include vertical-centerer();
+      h2 {
+        font-family: UniNeueBold, sans-serif;
+        font-size:$f42;
+        color:$black;
+        margin-bottom:$f42;
+      }
+      p {
+        font-family: UniNeueBook, sans-serif;
+        font-size:$f26;
+        line-height:$f34;
+        color:$black;
+        margin-bottom:$f55;
+        span {
+          color:$red;
+          font-size:$f26;
+        }
+      }
+      .buttons {
+        .btn-no-fill {
+          color:$black;
+          border:none;
+          text-decoration: underline;
+        }
+        .terms-popup {
+          opacity: 0.38;
+        }
+      }
+    }
+
+  }
+  &[data-last=last]{
+    .img{
+      float: right;
+    }
+  }
+}
+#subscriptions {
+  height:auto !important;
+}
+
+#product-types {
+  padding:$f89;
+  background-color: $white;
+  .row {
+    margin-left:-$f16;
+    margin-right:-$f16;
+    .type {
+      display: inline-block;
+      width: calc(33.3333% - #{$f34});
+      height:$f233;
+      margin: $f16 $f16;
+      background-color: $black;
+      color:$white;
+      text-align: center;
+      line-height:$f233;
+      font-family: UniNeueBold, sans-serif;
+      font-size:$f34;
+      background-size:100%;
+      background-position:center center;
+      transition:all 0.16s ease;
+      cursor:pointer;
+      &:hover {
+        background-size:110%;
+        background-position:center center;
+      }
+    }
+  }
+}
+
+
+#footer {
+  height: fn-w(610);
+  background-color: $black;
+
+
+  }

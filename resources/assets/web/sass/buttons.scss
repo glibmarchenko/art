@@ -1,0 +1,253 @@
+
+@mixin respond-to($media) {
+  @if $media==mobile {
+    @media screen and (max-width: $small - 1) {
+      @content;
+    }
+  }
+  @else if $media==mediumscreen {
+    @media screen and (min-width: $small) and (max-width: $large - 1) {
+      @content;
+    }
+  }
+  @else if $media==largescreen {
+    @media screen and (min-width: $large) {
+      @content;
+    }
+  }
+}
+/*
+  Color variables regular and hover
+ */
+$blue: #63D8FF;
+$green: #1BE5A8;
+/*$green-hover: rgba(27, 229, 168, 0.85);*/
+$black: #23232D;
+$red: #FF806C;
+$gray: #919196;
+$lightgray: #f8f7f5;
+$white: #FFFFFF;
+
+
+/*
+  Fibonacci shortcuts for vw
+ */
+//$f5: 0.260vw;
+//$f8: 0.416vw;
+//$f13: 0.677vw;
+//$f16: 0.833vw;
+//$f21: 1.093vw;
+//$f26: 1.354vw;
+//$f34: 1.770vw;
+//$f42: 2.187vw;
+//$f55: 2.864vw;
+//$f68: 3.541vw;
+//$f89: 4.635vw;
+//$f110: 5.729vw;
+//$f144: 7.5vw;
+//$f178: 9.270vw;
+//$f233: 12.135vw;
+//$f288: 15vw;
+
+.btn {
+  display:inline-block;
+  padding: 0 $f21 fn-w(5) $f21;
+  height:$f42;
+  line-height:$f42;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: $f42;
+  text-transform:uppercase;
+  font-family: ProximaNovaBold, sans-serif;
+  font-size:$f16;
+  text-decoration: none;
+  color:$white;
+  vertical-align: middle;
+  cursor:pointer;
+}
+
+.btn-55, .btn-large {
+  padding: 0 $f26 fn-w(5) $f26;
+  height:$f55;
+  line-height:$f55;
+  font-size:$f21;
+}
+
+.btn-34, .btn-small {
+  padding: 0 $f16 fn-w(5) $f16;
+  height:$f34;
+  line-height:$f34;
+  font-size:$f13;
+}
+
+@include make-buttons($desktop-size, 'd')
+
+.btn-regular {
+  border-color: $gray;
+  &:hover {
+    border-color: $green;
+  }
+}
+
+.btns-group{
+  position: relative;
+  padding: $f21;
+}
+
+.group-centered{
+  margin-top:-$f42;
+  margin-bottom:$f42;
+  text-align: center;
+  a {
+    margin:0 $f13;
+  }
+}
+
+.dropdown-group{
+  display: inline-block;
+  position: relative;
+}
+
+.btn-fill-blue {
+  color:$white;
+  border-color: $blue;
+  background-color:$blue;
+  &:hover {
+    color: $white;
+    border-color: $blue - 20;
+    background-color:$blue - 20;
+  }
+}
+
+.btn-fill-green {
+  color:$white;
+  border-color: $green;
+  background-color:$green;
+  &:hover {
+    color: $white;
+    border-color: $green - 20;
+    background-color:$green - 20;
+  }
+}
+
+.btn-fill-red {
+  color:$white;
+  border-color: $red;
+  background-color:$red;
+  &:hover {
+    color: $white;
+    border-color: $red - 20;
+    background-color:$red - 20;
+  }
+}
+
+.btn-inactive {
+  opacity:0.33;
+}
+
+.btn-fill-white{
+  color: $white;
+  border-color: $white;
+  &:hover {
+    color: $black;
+    background-color:$white;
+  }
+}
+
+.btn-fill-black{
+  color: $white;
+  border-color: $black;
+  background-color:$black;
+  &:hover {
+    color: $white;
+    background-color:$black + 10;
+  }
+}
+
+.btn-transparent {
+  color: $white;
+  border:none;
+  background-color:rgba(255, 255, 255, 0.15);
+  &:hover {
+    color: $white;
+    background-color:rgba(255, 255, 255, 0.21);
+  }
+}
+
+.btn-outline-blue {
+  border-color: $blue;
+  background-color:$blue;
+  color:$blue;
+  background:none;
+  &:hover {
+    color: $white;
+    background-color:$blue;
+  }
+}
+
+.btn-outline-gray {
+  border-color: rgba(145,145,150,0.15);
+  color:$gray;
+  background:none;
+  &:hover {
+    background-color: $gray;
+    color:$white;
+  }
+}
+
+.btn-outline-green {
+  border-color: $green;
+  color:$green;
+  background:none;
+  &:hover {
+    color: $white;
+    background-color:$green;
+  }
+}
+
+.btn-outline-black {
+  border-color: $black;
+  color:$black;
+  background:none;
+  &:hover {
+    color: $white;
+    background-color:$black + 10;
+  }
+}
+
+
+.btn-outline-red {
+  border-color: $red;
+  color:$red;
+  background:none;
+  &:hover {
+    color: $white;
+    background-color:$red;
+  }
+}
+
+.btn-outline-white{
+  color: $white;
+  border-color: $white;
+  &:hover {
+    color: $black;
+    background-color:$white;
+  }
+}
+
+
+
+.btn-outline-transparent {
+  border-color: rgba(145, 145, 150, 0.25);
+  color: rgba(145, 145, 150, 0.25);
+  background: none;
+  &:hover {
+    background-color: rgba(145, 145, 150, 0.25);
+    color: rgba(145, 145, 150, 0.85);
+  }
+}
+
+.spaced-34 {
+  margin-left:$f34;
+  margin-right:$f34;
+}

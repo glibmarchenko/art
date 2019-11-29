@@ -1,0 +1,268 @@
+#orders {
+  margin-top: calc(#{$f68 } + #{$f68});
+  .wrapper {
+    margin-top: 0;
+    padding: $f55;
+    @include respond-to(mobile) {
+      padding: $f55;
+    }
+    .order {
+      margin-bottom: $f55;
+      @include respond-to(mobile) {
+        margin-bottom: $f68;
+        background-color: $white;
+      }
+      h1 {
+        font-size: $f34;
+        font-family: UniNeueBold, sans-serif;
+        position: relative;
+        @include respond-to(mobile) {
+          font-size: $f68;
+          color:$red;
+          margin-bottom:$f34;
+          padding-top:$f55;
+          padding-left:$f55;
+        }
+        span {
+          color: $mediumgray;
+          font-size: $f21;
+          vertical-align: bottom;
+          @include respond-to(mobile) {
+            font-size: $f55;
+            display:block;
+            margin-top:$f26;
+          }
+        }
+
+        .total-price {
+          font-size: $f34;
+          font-family: UniNeueBold, sans-serif;
+          text-decoration: underline;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          color: $black;
+          @include respond-to(mobile) {
+            font-size: $f68;
+            display:none;
+          }
+        }
+
+      }
+      .products {
+        background-color: $white;
+        margin-left: -$f55;
+        margin-right: -$f55;
+        padding: 0 $f55;
+        margin-top: $f34;
+        @include respond-to(mobile) {
+            margin: 0 !important;
+            padding: 0 $f55;
+        }
+      }
+
+      .product {
+        position: relative;
+        .separator-small {
+          display: block;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          height: 2px;
+          background-color: $lightgray;
+          width: calc(100% - #{$f233} - #{$f34});
+        }
+
+        .content {
+          position: relative;
+          text-align: left;
+          padding: $f21 0;
+          background-color: $white;
+
+          .product-image {
+            height: $f233;
+            width: $f233;
+            display: inline-block;
+            @include respond-to(mobile) {
+              width: $f480;
+              height: $f480;
+            }
+          }
+
+          .product-description {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            display: inline-block;
+            margin-left: $f34;
+            @include respond-to(mobile) {
+              position: relative;
+              transform: none;
+              display: inline-block;
+              margin-left: $f55;
+            }
+            .product-type {
+              font-family: AcrobatBold, sans-serif;
+              font-size: $f21;
+              color: $red;
+              text-transform: uppercase;
+              margin-bottom: $f8;
+              @include respond-to(mobile) {
+                font-size: $f55;
+                margin-top:$f34;
+                margin-bottom:$f55;
+              }
+              &.obj-2 {
+                color: $green !important;
+              }
+              &.obj-3 {
+                color: $blue !important;
+              }
+            }
+            .product-author {
+              font-family: AcrobatBold, sans-serif;
+              font-size: $f21;
+              line-height: $f21;
+              color: $black;
+              margin-bottom: $f8;
+              @include respond-to(mobile) {
+                font-size: $f68;
+                margin-bottom:$f42;
+              }
+            }
+            .product-name {
+              font-family: AcrobatBold, sans-serif;
+              font-size: $f21;
+              line-height: $f21;
+              color: $gray;
+              margin-bottom: $f8;
+              @include respond-to(mobile) {
+                font-size: $f55;
+                line-height: $f55;
+                margin-bottom: $f55;
+              }
+            }
+            .product-details-list {
+              margin-top: $f26;
+              li {
+                font-family: AcrobatRegular, sans-serif;
+                font-size: $f21;
+                line-height: $f21;
+                color: $gray;
+                margin-bottom: $f8;
+                @include respond-to(mobile) {
+                  font-size: $f55;
+                  line-height: $f55;
+                  margin-bottom: $f34;
+                }
+                span {
+                  font-family: AcrobatBold, sans-serif;
+                  font-size: $f21;
+                  line-height: $f21;
+                  color: $black;
+                  @include respond-to(mobile) {
+                    font-size: $f55;
+                    line-height: $f55;
+                  }
+                }
+
+              }
+            }
+          }
+
+          .product-price {
+            @include vertical-centerer();
+            right: $f89;
+            font-family: AcrobatBold, sans-serif;
+            font-size: $f55;
+            color: $black;
+            position: absolute;
+            padding-right: $f68;
+            span {
+              font-family: AcrobatBold, sans-serif;
+              font-size: $f34;
+              color: $black;
+              vertical-align: bottom;
+              position: absolute;
+              right: 0;
+              bottom: 0;
+              @include respond-to(mobile) {
+                  font-size:$f42;
+              }
+            }
+          }
+
+          .product-delete {
+            @include vertical-centerer();
+            right: $f34;
+            position: absolute;
+            br {
+              display: block;
+              margin-bottom: $f34;
+            }
+            .product-delete-btn {
+              img {
+                height: $f21;
+                width: $f21;
+                vertical-align: bottom;
+              }
+            }
+          }
+
+        }
+      }
+
+      .delivery-details {
+        @include centerer();
+        @include respond-to(mobile) {
+          margin-top: $f55;
+          display: none;
+          position: relative;
+          transform: none;
+          left: 0;
+        }
+
+        .product-type {
+          font-family: AcrobatBold, sans-serif;
+          font-size: $f21;
+          line-height: $f21;
+          color: $red;
+          text-transform: uppercase;
+          margin-bottom: $f8;
+        }
+        .product-author {
+          font-family: AcrobatBold, sans-serif;
+          font-size: $f21;
+          line-height: $f21;
+          color: $black;
+          margin-bottom: $f8;
+        }
+        .product-name {
+          font-family: AcrobatBold, sans-serif;
+          font-size: $f21;
+          line-height: $f21;
+          color: $gray;
+          margin-bottom: $f8;
+        }
+        .product-details-list {
+          margin-top: $f26;
+          li {
+            font-family: AcrobatRegular, sans-serif;
+            font-size: $f21;
+            line-height: $f21;
+            color: $gray;
+            margin-bottom: $f8;
+            span {
+              font-family: AcrobatBold, sans-serif;
+              font-size: $f21;
+              line-height: $f21;
+              color: $black;
+
+            }
+
+          }
+        }
+      }
+    }
+  }
+}

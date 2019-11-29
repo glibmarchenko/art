@@ -1,0 +1,121 @@
+@import '../../pages/author';
+@media screen and (max-width: 700px) {
+  #left-block-au{
+    width: 100%;
+    height: auto;
+    position: static;
+    margin-top: $f144;
+    .author-avatar{
+      height: 100vw;
+      img{
+        height: 100vw;
+        object-fit: cover;
+      }
+    }
+    #info-box{
+      background: #fff;
+      padding-bottom: $f89;
+      h4{
+        font-size: $f55;
+        margin-top: $f89;
+        margin-bottom: $f55;
+        margin-left: $f34;
+        font-family: UniNeueBold;
+      }
+      .block-details-body{
+        padding: 0 $f34;
+        font-size: $f42;
+        font-family: AcrobatBold, sans-serif;
+        color: $gray;
+      }
+      p{
+        padding: 0 $f34;
+        font-size: $f42;
+        font-family: AcrobatBold, sans-serif;
+        color: $gray;
+      }
+    }
+    .card-menu{
+      & > .buy-block {
+        display: none;
+      }
+      .description{
+        height: $f233;
+        margin-bottom: 0;
+        padding: 0 $f34;
+        .wrap{
+          position: relative;
+          top: 50%;
+          -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+        }
+        h1{
+          font-size: $f55;
+          font-family: AcrobatExtraBold, sans-serif;
+          text-transform: uppercase;
+        }
+        h2{
+          font-size: $f42;
+          color: $gray;
+        }
+        a{
+          font-size: $f42;
+          font-family: AcrobatBold, sans-serif;
+          text-decoration: none;
+        }
+        p, .block-text-details{
+          display: none;
+        }
+      }
+    }
+    .buy-card {
+      padding: 0;
+      background: none;
+      height: 0;
+      .price, .btn-buy{
+        display: none;
+      }
+      .btn-buy{
+        padding: 0;
+        width: 100%;
+        a{
+          font-size: $f34;
+        }
+      }
+    }
+    .mob-navigation{
+      .buy-block {
+        .count-subscribers {
+          display: none;
+        }
+      }
+      .info{
+        border-left: 1px solid $gray;
+      }
+    }
+  }
+  #right-block-au{
+    width: 100%;
+    height: auto;
+    position: static;
+    h1{
+      display: none;
+    }
+    h2{
+      display: block;
+      &.title {
+        display: block;
+        font-family: UniNeueBold;
+        font-size: $f55;
+        margin-bottom: $f55;
+        margin-top: $f89;
+        margin-left: $f34;
+      }
+    }
+    .main-content-heading{
+      h2{
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,173 @@
+@import "styles";
+
+$f2: .185vw;
+$f3: .277vw;
+$f5: .46vw;
+$f8: .74vw;
+$f13: 1.02vw;
+$f16: 1.48vw;
+$f21: 1.94vw;
+$f26: 2.4vw;
+$f34: 3.14vw;
+$f42: 3.88vw;
+$f55: 5.09vw;
+$f68: 6.29vw;
+$f89: 8.24vw;
+$f110: 10.18vw;
+$f144: 13.3vw;
+$f233: 21.57vw;
+$f288: 26.66vw;
+$f377: 34.9vw;
+$f466: 43.14vw;
+$f610: 56.47vw;
+$f754: 69.8vw;
+
+@import 'helpers';
+@import 'mobile/mixins';
+@import 'mobile/buttons';
+@import 'mobile/footer';
+@import 'mobile/modal';
+
+@import 'mobile/assets/card';
+
+@import 'mobile/pages/author';
+@import 'mobile/pages/home';
+@import 'mobile/pages/gallery-show';
+@import 'mobile/pages/subscriptions';
+@import 'mobile/pages/register';
+@import 'mobile/pages/settings';
+@import 'mobile/pages/create_item';
+@import 'mobile/pages/purchase-cart';
+
+@import 'mobile/components/menu';
+@import 'mobile/components/main-content-heading';
+@import 'mobile/components/prints-layout';
+@import 'mobile/components/galleries';
+@import 'mobile/components/purchase-product';
+@import 'mobile/components/images-upload';
+@import 'mobile/components/picture-upload';
+@import 'mobile/components/navigation';
+@import 'mobile/components/create-product';
+@import 'mobile/components/form-section';
+@import 'mobile/components/select2';
+@import 'mobile/components/multiselect';
+@import 'mobile/components/subscription-navigation';
+
+*, *:before, *:after {
+  box-sizing: border-box !important;
+}
+
+*:focus {
+  outline: 0;
+}
+.phpdebugbar {
+  font-size:$f13;
+  * {
+    font-size:$f13;
+  }
+}
+
+html, body {
+  font-family: AcrobatRegular, sans-serif;
+  color: $black;
+  background-color: $lightgray;
+  width: -webkit-calc(100% - 0px);
+  //overflow-y:hidden;
+  * {
+    font-size: 0;
+  }
+  /* Change the white to any color ;) */
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px $lightgray inset;
+  }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active �� ������ 2.1.8 */
+{
+  opacity: 0;
+}
+
+@media screen and (max-width: 700px) {
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0 0.65em !important;
+    height: auto !important;
+  }
+  .mob-navigation{
+    display: block;
+    .cols{
+      background: $black;
+      color: $gray;
+      display: inline-block;
+      text-align: center;
+      font-family: ProximaNovaExtrabld;
+      height: $f144;
+      font-size: $f34;
+      line-height: $f144;
+      text-transform: uppercase;
+      a{
+        font-size: $f34;
+        color: $gray;
+        font-family: ProximaNovaExtrabld;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        border: none;
+        background: none;
+        line-height: $f144;
+        vertical-align: baseline;
+      }
+    }
+    .part-2{
+      .buy-block {
+        .btn-buy{
+          display: block !important;
+        }
+      }
+      width: 50%;
+      &.active{
+        background-color: $red;
+        color: #fff;
+        a{
+          color: #fff;
+        }
+      }
+    }
+    .part-3{
+      width: 33.333%;
+      &.active{
+        background-color: $red;
+        color: #fff;
+        a{
+          color: #fff;
+        }
+      }
+    }
+  }
+  .bl-workpanel {
+    display: none;
+  }
+
+  .form-error-message {
+    font-size: $f42;
+    line-height: $f42;
+  }
+}
+
+input,
+textarea {
+  -webkit-appearance: none;
+  border-radius: $f13;
+}
+
+#app.noscroll {
+  position: fixed;
+  width: 100%;
+}
+/* end */

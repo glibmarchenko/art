@@ -1,0 +1,37 @@
+@import "../footer";
+@media screen and (max-width: 700px) {
+  .footer{
+    padding: $f89 $f55 0 $f55;
+    .block-part-3{
+      padding-right: 0;
+      width: 100%;
+        .title{
+          font-size: $f55;
+          color: #fff;
+        }
+        .simple-text{
+          font-size: $f34;
+        }
+
+    }
+    .block-part-2{
+      width: 100%;
+      .mob-title{
+        display: block;
+        font-size: $f55;
+        margin-bottom: $f55;
+        color: #fff;
+        font-family: UniNeueRegular;
+      }
+      .title, img{
+        display: none;
+      }
+      .simple-text{
+        a{
+          margin-bottom: $f55;
+          font-size: $f55;
+        }
+      }
+    }
+  }
+}

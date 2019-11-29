@@ -1,0 +1,31 @@
+<?php
+
+return [
+    'names' => [
+        'z3D'           => '3D рендеринг',
+        'abstract'      => 'Абстракция',
+        'author'        => 'Авторский стиль',
+        'artdeco'       => 'Арт-деко',
+        'geometry'      => 'Геометрия',
+        'hyperrealism'  => 'Гиперреализм',
+        'graphics'      => 'Графика',
+        'calligraphy'   => 'Каллиграфия',
+        'collage'       => 'Коллаж',
+        'сonceptual'    => 'Концептуальный',
+        'character'     => 'Персонаж',
+        'expressionism' => 'Экспрессионизм',
+        'figurative'    => 'Фигуративный',
+        'futurism'      => 'Футуризм',
+        'landscape'     => 'Пейзаж',
+        'minimalism'    => 'Минимализм',
+        'pop'           => 'Поп арт',
+        'portraiture'   => 'Портрет',
+        'still life'    => 'Натюрморт',
+        'street'        => 'Уличный',
+        'surrealism'    => 'Сюрреализм',
+        'decor'         => 'Декор',
+        'furniture'     => 'Мебель',
+        'light'         => 'Освещение',
+        'sculpture'     => 'Скульптура',
+    ],
+];

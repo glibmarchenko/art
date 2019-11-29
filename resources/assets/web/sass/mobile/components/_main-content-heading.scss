@@ -1,0 +1,22 @@
+@import '../../components/main-content-heading';
+@media screen and (max-width: 700px) {
+  .main-content-heading{
+    #homepage & {
+      margin-bottom: $f55;
+    }
+    @include mobile-headings;
+    h1 {
+      .d-b{
+        display: inline-block;
+        font-size: $f55;
+      }
+    }
+    .top-sp-68x2{
+      padding-top: 0;
+    }
+    &.top-sp-68x2 {
+      padding-top: $f144;
+      margin-top: 0;
+    }
+  }
+}

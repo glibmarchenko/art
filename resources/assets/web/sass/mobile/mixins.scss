@@ -1,0 +1,181 @@
+@mixin close-circle {
+  width: $f89;
+  height: $f89;
+  cursor: pointer;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 10;
+  float: right;
+
+  img {
+    width: 100%;
+  }
+}
+
+@mixin popup-close-circle {
+  @include close-circle;
+  display: block;
+  position: absolute;
+  right: 0;
+}
+
+@mixin mobile-headings {
+  h1 {
+    font-size: $f55;
+    margin-top: $f89;
+    margin-bottom: $f21;
+  }
+
+  h2 {
+    font-size: $f34;
+    margin-bottom: $f55;
+  }
+
+  h1,
+  h2 {
+    margin-left: $f42;
+  }
+}
+
+@mixin mobile-form {
+
+  padding-left: $f34;
+  padding-right: $f34;
+
+  .form-row-group-inputs .form-row,
+  .form-row {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .btn-m-89 {
+    font-size: $f34;
+  }
+
+  input,
+  select,
+  .select2 {
+    height: $f144;
+    line-height: $f144;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  input,
+  textarea,
+  select,
+  .select2 {
+    font-size: $f55;
+    color: $lowgray;
+    border: 1px solid $cararra;
+    border-radius: $f5;
+    margin-bottom: $f42;
+    padding-left: $f26;
+    padding-right: $f26;
+  }
+
+  textarea {
+    height: $f377;
+  }
+
+  label {
+    font-size: $f42;
+    line-height: inherit;
+    font-weight: bold;
+    margin-bottom: $f21;
+
+    span {
+      font-size: $f42;
+    }
+
+    b {
+      font-size: $f42;
+      font-family: AcrobatRegular, sans-serif;
+      font-weight: 600;
+    }
+  }
+
+  .form-row-group .message {
+    font-size: $f55;
+    line-height: 0;
+  }
+
+  .select2 {
+    background-color: $white;
+
+    .select2-selection {
+      padding-left: 0;
+      padding-right: 0;
+
+      .select2-selection__rendered {
+        font-size: $f55;
+        height: $f144;
+        line-height: $f144;
+        color: $lowgray;
+      }
+    }
+  }
+
+  .select2-container {
+
+    .select2-results__options {
+      border: 1px solid $cararra;
+
+      li {
+        height: $f144;
+        line-height: $f144;
+        font-size: $f55;
+      }
+    }
+  }
+}
+
+@mixin mobile-product-image {
+  background-position: left center !important;
+  float: left;
+}
+
+@mixin mobile-product-details {
+
+  position: relative;
+  float: left;
+  width: calc(100% - #{$f233});
+  transform: translate(0, 0);
+  margin-left: 0;
+  padding-left: $f34;
+
+  .product-author {
+    font-size: $f55;
+    line-height: $f55;
+  }
+
+  .product-name {
+    font-size: $f42;
+    line-height: $f42;
+    font-family: AcrobatRegular, sans-serif;
+  }
+
+  .product-details-list {
+    li, li span {
+      font-size: $f42;
+      line-height: $f42;
+    }
+  }
+}
+
+@mixin navigation-2-buttons {
+  background: none;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: $f68;
+
+  .btn {
+    margin-left: calc(#{$f34} / 2);
+    margin-right: calc(#{$f34} / 2);
+  }
+}

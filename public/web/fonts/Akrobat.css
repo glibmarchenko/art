@@ -1,0 +1,32 @@
+@font-face {
+    font-family: AcrobatBlack;
+    src: url("Akrobat/Akrobat-Black.otf") format("opentype");
+}
+@font-face {
+    font-family: AcrobatBold;
+    src: url("Akrobat/Akrobat-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: AcrobatExtraBold;
+    src: url("Akrobat/Akrobat-ExtraBold.otf") format("opentype");
+}
+@font-face {
+    font-family: AcrobatExtraLight;
+    src: url("Akrobat/Akrobat-ExtraLight.otf") format("opentype");
+}
+@font-face {
+    font-family: AcrobatLight;
+    src: url("Akrobat/Akrobat-Light.otf") format("opentype");
+}
+@font-face {
+    font-family: AcrobatRegular;
+    src: url("Akrobat/Akrobat-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: AcrobatSemiBold;
+    src: url("Akrobat/Akrobat-SemiBold.otf") format("opentype");
+}
+@font-face {
+    font-family: AcrobatThin;
+    src: url("Akrobat/Akrobat-Thin.otf") format("opentype");
+}

@@ -1,0 +1,65 @@
+@import '../../components/multiselect';
+
+@media screen and (max-width: 700px) {
+
+  .form-section .multiselect,
+  .multiselect {
+    border: none;
+
+    .multiselect__tags {
+      padding-bottom: 0;
+      border: 1px solid $cararra;
+
+      .multiselect__input {
+
+      }
+
+      .multiselect__tag {
+        height: $f110;
+        margin: calc(#{$f34} / 2) 0 calc(#{$f34} / 2) calc(#{$f34} / 2);
+        padding-left: $f5;
+        padding-right: $f5;
+
+        span, i:after {
+          line-height: $f110;
+          font-size: $f55;
+          color: white;
+          letter-spacing: $f2;
+        }
+
+        span {
+          padding-right: $f21;
+        }
+
+        i {
+          position: relative;
+
+          &:after {
+            position: relative;
+            font-size: $f110;
+            top: auto;
+            left: auto;
+          }
+        }
+      }
+    }
+    .multiselect__content-wrapper {
+
+      .multiselect__content {
+
+        .multiselect__element {
+
+          span {
+            height: $f89;
+
+            span {
+              font-size: $f55;
+              color: #7e7e84;
+              line-height: $f89;
+            }
+          }
+        }
+      }
+    }
+  }
+}

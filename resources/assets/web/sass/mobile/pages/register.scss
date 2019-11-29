@@ -1,0 +1,81 @@
+@import '../../pages/register';
+
+@media screen and (max-width: 700px) {
+  .steps-block {
+
+    .user-type-block {
+      background-color: rgba($black, .9);
+      height: $f233;
+      padding-left: $f34;
+      padding-right: $f34;
+
+      span {
+        color: $white;
+        font-size: $f89;
+        line-height: $f233;
+        font-family: AcrobatBold;
+      }
+
+      .btn-icon-close {
+        @include close-circle;
+        height: $f233;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .panel-block {
+
+      &.hello-part {
+        padding: $f55 $f34;
+
+        .content {
+
+          .title {
+            font-size: $f89;
+            font-family: UniNeueBold;
+            margin-bottom: $f21;
+          }
+
+          .description {
+            font-size: $f55;
+            font-family: UniNeueBook;
+          }
+        }
+      }
+
+      &.form-part {
+        @include mobile-form;
+
+        .navigation {
+          @include navigation-2-buttons;
+        }
+      }
+    }
+  }
+
+  .register-block.fill-block {
+    height: auto;
+
+
+    .panel-block {
+      width: 100%;
+      height: auto;
+
+      .content {
+        transform: none;
+        text-align: center;
+        top: auto;
+        left: auto;
+
+        .title {
+          font-size: $f55;
+        }
+
+        .description {
+          font-size: $f42;
+        }
+      }
+    }
+  }
+}

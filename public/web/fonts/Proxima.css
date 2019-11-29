@@ -1,0 +1,61 @@
+@font-face {
+    font-family: ProximaNovaExtrabld;
+    src: url("Proxima/ProximaNova-Xbold.otf") format("opentype");
+}
+@font-face {
+    font-family: ProximaNovaBlack;
+    src: url("Proxima/ProximaNova-Black.otf") format("opentype");
+}
+@font-face {
+    font-family: ProximaNovaBlackIt;
+    src: url("Proxima/ProximaNova-BlackIt.otf") format("opentype");
+}
+@font-face {
+    font-family: ProximaNovaBold;
+    src: url("Proxima/ProximaNova-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: ProximaNovaBoldIt;
+    src: url("Proxima/ProximaNova-BoldIt.otf") format("opentype");
+}
+@font-face {
+    font-family: ProximaNovaLight;
+    src: url("Proxima/ProximaNova-Light.otf") format("opentype");
+}
+@font-face {
+    font-family: ProximaNovaLightIt;
+    src: url("Proxima/ProximaNova-LightIt.otf") format("opentype");
+}
+@font-face {
+    font-family: ProximaNovaReg;
+    src: url("Proxima/ProximaNova-Reg.otf") format("opentype");
+}
+@font-face {
+    font-family: ProximaNovaRegIt;
+    src: url("Proxima/ProximaNova-RegIt.otf") format("opentype");
+}
+@font-face {
+    font-family: ProximaNovaSbold;
+    src: url("Proxima/ProximaNova-Sbold.otf") format("opentype");
+}
+@font-face {
+    font-family: ProximaNovaSboldIt;
+    src: url("Proxima/ProximaNova-SboldIt.otf") format("opentype");
+}
+@font-face {
+    font-family: ProximaNovaThin;
+    src: url("Proxima/ProximaNova-Thin.otf") format("opentype");
+}
+@font-face {
+    font-family: ProximaNovaThinIt;
+    src: url("Proxima/ProximaNova-ThinIt.otf") format("opentype");
+}
+@font-face {
+    font-family: ProximaNovaXbold;
+    src: url("Proxima/ProximaNova-Xbold.otf") format("opentype");
+}
+@font-face {
+    font-family: ProximaNovaXboldIt;
+    src: url("Proxima/ProximaNova-XboldIt.otf") format("opentype");
+}
+

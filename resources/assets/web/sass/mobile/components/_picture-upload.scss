@@ -1,0 +1,14 @@
+@import '../../components/picture-upload';
+
+@media screen and (max-width: 700px) {
+  #picture-input {
+    max-width: $f466;
+    .picture-preview {
+      z-index: 5 !important;
+    }
+    button {
+      white-space: nowrap;
+      margin-bottom: $f55;
+    }
+  }
+}

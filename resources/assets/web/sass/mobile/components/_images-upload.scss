@@ -1,0 +1,27 @@
+@import '../../components/images-upload';
+
+@media screen and (max-width: 700px) {
+  #images-upload {
+    margin-bottom: $f89;
+    .vue_component__upload--image .upload_image_form__thumbnail .delete {
+      width: $f68;
+      height: $f68;
+      top: calc(50% - #{$f68 / 2});
+      left: calc(50% - #{$f68 / 2});
+    }
+  }
+
+  #SelectUserImage {
+    & > #selectedImage {
+      max-width: $f466;
+      border: 0.46vw solid #FFFFFF;
+    }
+  }
+
+  #backgroundCropper > #cropper {
+    width: 80%;
+    margin-top: $f233;
+    height: auto;
+    max-height: 65vh;
+  }
+}

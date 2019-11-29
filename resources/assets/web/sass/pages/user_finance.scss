@@ -1,0 +1,171 @@
+.finance-block {
+  position: relative;
+  margin-top: $f68;
+  height: calc(100vh - #{$f68});
+  background-color: $white;
+  overflow: auto;
+  .header-block {
+    position: relative;
+    overflow: hidden;
+
+    .available {
+      position: relative;
+      display: inline-block;
+      width: 50%;
+      float: left;
+      padding: $f42 $f89;
+      background-color: $lightgray;
+
+    }
+    .waiting {
+      position: relative;
+      display: inline-block;
+      width: 50%;
+      float: left;
+      padding: $f42 $f89;
+      background-color: $blue;
+    }
+    .title {
+      font-size: $f34;
+      font-family: AcrobatRegular;
+      margin-bottom: fn-w(12);
+      &.gray {
+        color: $gray;
+      }
+      &.white {
+        color: $white;
+      }
+    }
+    .finance-content {
+      position: relative;
+      display: table;
+      width: 100%;
+      .sum {
+        position: relative;
+        display: table-cell;
+        vertical-align: middle;
+
+        font-family: AcrobatBold;
+        font-size: $f89;
+        color: $black;
+        div {
+          position: relative;
+          display: inline-block;
+          font-size: $f55;
+          color: $black;
+          font-family: AcrobatBold;
+          vertical-align: bottom;
+          margin-bottom: 2px;
+        }
+      }
+      .buttons {
+        position: relative;
+        display: table-cell;
+
+        vertical-align: middle;
+        text-align: right;
+        a {
+          display: inline-block;
+          font-size: $f21;
+          margin-left: $f21;
+        }
+      }
+    }
+
+  }
+  .history-block {
+    position: relative;
+    overflow: hidden;
+    padding: $f89;
+    .main-title {
+      font-size: $f42;
+      font-family: AcrobatRegular;
+      color: $black;
+      margin-bottom: $f55;
+    }
+    .main-content {
+      position: relative;
+      overflow: hidden;
+      .light-table {
+        position: relative;
+        width: 100%;
+        thead {
+          td {
+            background-color: $lowwhite;
+            color: $gray;
+            font-family: AcrobatBold, sans-serif;
+            font-size: $f26;
+            text-align: center;
+            padding: $f13;
+            border-left: 1px solid $white;
+            border-right: 1px solid $white;
+            &:first-child {
+              border-left: 0;
+              width: $f144;
+            }
+            &:last-child {
+              border-right: 0;
+            }
+          }
+        }
+        tbody {
+          tr {
+            border-bottom: 2px solid $lowwhite;
+            &:last-child {
+              border-bottom: 0;
+            }
+            td {
+              padding: $f16 $f16;
+              font-size: $f34;
+              text-align: center;
+              vertical-align: middle;
+              img {
+                width:$f110;
+              }
+              &:first-of-type {
+                margin-right: 0;
+              }
+              .item-image {
+                background-color: $lowwhite;
+                width: $f144;
+                height: $f144;
+                background-size: cover;
+                background-position: center;
+
+              }
+              .interior {
+                border-left: 1px solid $lowwhite;
+                border-right: 1px solid $lowwhite;
+                width: 100%;
+                height: $f144;
+                position: relative;
+                display: table;
+                div {
+                  padding: 0 $f42;
+                  position: relative;
+                  display: table-cell;
+                  vertical-align: middle;
+                  font-family: AcrobatBold;
+                  font-size: $f26;
+                  color: $black;
+                  .currency {
+                    font-size: $f21;
+                    color: $black;
+                    font-family: AcrobatBold;
+                    vertical-align: bottom;
+                  }
+                }
+              }
+              &:nth-child(2) .interior {
+                border-left: 0;
+              }
+              &:last-child .interior {
+                border-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

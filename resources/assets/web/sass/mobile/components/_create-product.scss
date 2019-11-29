@@ -1,0 +1,24 @@
+@import '../../components/create-product';
+
+@media screen and (max-width: 700px) {
+  #create-product {
+    @include mobile-form;
+
+    .multiselect {
+      height: auto;
+      padding-right: 0;
+
+      .multiselect__select {
+        display: none;
+      }
+
+      .multiselect__tags {
+        padding-left: 0;
+
+        .multiselect__input {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

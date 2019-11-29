@@ -1,0 +1,94 @@
+/*
+    Center element vertically and horizontally
+    Parent element should have position relative
+    
+    usage : @include centerer;
+ */
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin vertical-centerer {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+  /*
+  Mixin to customize scrollbars
+  Beware, this does not work in all browsers
+  @author Hugo Giraudel
+  @param {Length} $size - Horizontal scrollbar's height and vertical scrollbar's width
+  @param {Color} $foreground-color - Scrollbar's color
+  @param {Color} $background-color [mix($foreground-color, white, 50%)] - Scrollbar's color
+  @example scss - Scrollbar styling
+  @include scrollbars(.5em, slategray);
+  */
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+  // For Google Chrome
+  ::-webkit-scrollbar {
+    width:  $size;
+    height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
+
+/*
+  Mixin used to keep element aspect ratio
+  https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+ 
+ */
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+/*
+  Function for converting PX to VW.
+  As a result, the function returns the pixel value from the width (1920px) of the window.
+
+  Usage: padding: fnW(16); //result: padding: 0.83333333vw
+
+ */
+@function fnW($val){
+  @return #{($val * 100) / 1920}vw;
+}
+
+/*
+  Function for converting PX to VH.
+  As a result, the function returns the pixel value from the height (1200px) of the window.
+
+  Usage: padding: fnH(16); //result: padding: 1.33333333vh
+
+ */
+@function fnH($val){
+  @return #{($val * 100) / 1200}vh;
+}

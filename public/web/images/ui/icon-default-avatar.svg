@@ -1,0 +1,32 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 399">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f5f5f0;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #23232d;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <title>icon-default-avatar</title>
+  <g>
+    <rect class="cls-1" width="400" height="399"/>
+    <g>
+      <g>
+        <circle class="cls-2" cx="200" cy="202.22" r="34.16"/>
+        <circle class="cls-2" cx="200" cy="202.22" r="27.45"/>
+        <path class="cls-2" d="M1029.85,334.12H987.45L980.83,328H939l-6.48,6.14H890.15a1.91,1.91,0,0,0-1.91,1.91v78.53a1.91,1.91,0,0,0,1.91,1.91h139.71a1.91,1.91,0,0,0,1.91-1.91V336A1.91,1.91,0,0,0,1029.85,334.12Z" transform="translate(-760 -173)"/>
+        <path class="cls-2" d="M905.14,333.9v-4.53a1.91,1.91,0,0,1,1.91-1.91H914a1.91,1.91,0,0,1,1.91,1.91V334" transform="translate(-760 -173)"/>
+      </g>
+      <g>
+        <line class="cls-2" x1="200" y1="185.22" x2="200" y2="219.21"/>
+        <line class="cls-2" x1="217" y1="202.22" x2="183" y2="202.22"/>
+      </g>
+    </g>
+  </g>
+</svg>

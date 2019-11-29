@@ -1,0 +1,99 @@
+.info-block-bold {
+  margin-top: $f34 !important;
+}
+.form-section {
+  &.disabled {
+    * {opacity:0.6 !important;}
+    input, select,textarea {
+      color:$lightgray !important;
+    }
+  }
+  .multiselect {
+    padding-right:0;
+    margin-bottom:$f34;
+    border:1px solid #c8c8c8;
+    height:auto;
+    min-height:auto;
+    border-radius:$f5;
+  }
+  .multiselect__select {
+    &:after {
+      display:none;
+    }
+    padding-right:0;
+    background:none;
+    border-radius:0;
+    height:auto;
+  }
+  .multiselect__tags {
+    height:auto;
+    min-height:auto;
+    padding:0;
+    background-color: $white;
+    line-height:0;
+    border-radius: $f5  !important;
+    padding-bottom:$f8;
+  }
+  .multiselect__tag-icon {
+    width:$f34;
+    height:$f34;
+    line-height:$f34;
+    position:absolute;
+    right:0;
+    top:0;
+    padding:0;
+    margin:0;
+    &:hover {
+      background-color: $blue - 10;
+    }
+    &:after{
+     @include centerer();
+      padding:0;
+      margin:0;
+      width:$f34;
+      height:$f34;  
+    }
+  }
+  .multiselect__tag {
+    padding:0;
+    margin:$f8;
+    margin-bottom:0;
+    height:$f34;
+    line-height:$f34;
+    background-color: $blue;
+    position:relative;
+    
+    
+    span {
+      font-size:$f16;
+      font-family: AcrobatBold, sans-serif;
+      line-height:$f34;
+      height:$f34;
+      margin-left:$f13;
+      padding-right:$f42;
+      display:inline-block;
+    }
+  }
+
+  .multiselect__input, .multiselect__single {
+    position: relative;
+    display: inline-block!important;
+    line-height: $f21  !important;
+    border: none !important;
+    border-radius: $f5  !important;
+    padding:0 !important;
+    padding-left:$f13 !important;
+    background: none  !important;
+    padding-top: fn-w(5) !important;
+    width: 100%;
+    transition: border .1s ease !important;
+    box-sizing: border-box !important;
+    margin-bottom: 0 !important;
+    right:0;
+    bottom:0;
+    vertical-align: top !important;
+  }
+  .multiselect__content-wrapper {
+    border-top:1px solid #c8c8c8;
+  }
+}

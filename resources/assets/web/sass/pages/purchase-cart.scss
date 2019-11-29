@@ -1,0 +1,409 @@
+#purchase-cart {
+  display: inline-block;
+
+  .menu-trigger {
+    opacity: 0;
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  .delivery-side {
+    position: absolute;
+    left: 0;
+    top: $f68;
+    height: calc(100vh - #{$f68});
+    z-index: 5;
+    width: 25%;
+    background-color: $lightgray;
+    padding: $f55 $f34;
+    overflow-y: scroll;
+    display: none;
+    border-right: 2px solid $lightgray;
+
+    select {
+      border: 1px solid $lowlightgray !important;
+      border-radius: $f5 !important;
+      font-family: AcrobatBold, sans-serif;
+      width: 100%;
+      font-size: $f21;
+      color: $black;
+      margin-bottom: $f16;
+      display: block;
+      line-height: $f42;
+      padding-left: $f13;
+      height: $f42;
+      background-color: $white;
+    }
+
+    h3 {
+      font-family: AcrobatBold, sans-serif;
+      font-size: $f42;
+      line-height: $f42;
+      color: $black;
+      margin-bottom: $f34;
+    }
+
+    label {
+      font-family: AcrobatRegular, sans-serif;
+      display: block;
+      font-size: 0.833vw;
+      color: #919196;
+      margin-bottom: $f8;
+      line-height: 0.833vw;
+    }
+
+    .ui.selection.dropdown {
+      border: 1px solid $gray !important;
+      margin-bottom: $f34;
+      border-radius: $f5 !important;
+      height: $f55 !important;
+      line-height: $f55 !important;
+      input {
+        height: $f55 !important;
+        line-height: $f55 !important;
+      }
+    }
+
+    .input {
+      border: 1px solid $lowlightgray !important;
+      border-radius: $f5 !important;
+      font-family: AcrobatBold, sans-serif;
+      width: 100%;
+      font-size: $f21;
+      color: $black;
+      margin-bottom: $f16;
+      display: block;
+      line-height: $f42;
+      padding-left: $f13;
+      height: $f42;
+      &.invalid {
+        border: 1px solid $red !important;
+      }
+    }
+
+    textarea {
+      min-height: $f89;
+    }
+    .multiselect {
+      margin-bottom: $f21;
+    }
+
+    .col-50 {
+      display: inline-block;
+      width: calc(50% - #{$f8});
+    }
+    .margin-left-16 {
+      margin-left: $f16;
+    }
+  }
+
+  #content-side {
+    position: absolute;
+    right: 0;
+    top: $f68;
+    height: calc(100vh - #{$f68});
+    z-index: 5;
+    width: 75%;
+    background-color: $white;
+    padding: $f89;
+    overflow-y: scroll;
+    display: none;
+    .no-purchases {
+      display:inline-block;
+      @include centerer();
+      font-size:$f34;
+      font-family: UniNeueBold, sans-serif;
+      color:$gray;
+    }
+    .products-group {
+      margin-bottom: $f144;
+    }
+
+    .heading {
+      h3 {
+        font-family: AcrobatBold, sans-serif;
+        font-size: $f42;
+        line-height: $f42;
+        color: $black;
+        margin-bottom: $f34;
+      }
+      .card-icon {
+        width: $f68;
+        height: $f68;
+        margin-bottom: $f13;
+        cursor: pointer;
+        border-radius: 50%;
+        overflow: hidden;
+        position: fixed;
+        right: $f68;
+        top: $f21;
+        z-index: 33;
+        img {
+          width: 100%;
+        }
+        .i-hover {
+          display: none;
+        }
+        .i-liked {
+          display: none;
+        }
+        &.liked {
+          .i-liked {
+            display: block;
+          }
+          .i-original {
+            display: none;
+          }
+        }
+        &:hover {
+          .i-hover {
+            display: block;
+          }
+          .i-original {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .separator {
+      margin: 0;
+      height: 2px;
+      background-color: $lightgray;
+    }
+
+    .summary {
+      .description-container {
+        display: inline-block;
+        width: 50%;
+        border-right: 2px solid $lightgray;
+        border-bottom: 2px solid $lightgray;
+        position: relative;
+        padding-right: $f89;
+        text-align: left;
+        height: 15vw;
+        .description {
+          @include vertical-centerer();
+          h2 {
+            font-family: AcrobatBold, sans-serif;
+            font-size: $f26;
+            color: $black;
+            margin-bottom: $f16;
+          }
+          p {
+            font-family: AcrobatRegular, sans-serif;
+            font-size: $f21;
+            color: $black;
+            line-height: $f26;
+          }
+        }
+      }
+      .summary-container {
+        display: inline-block;
+        border-right: 2px solid $lightgray;
+        border-bottom: 2px solid $lightgray;
+        width: 50%;
+        .props {
+          padding: $f34;
+          table {
+            border-spacing: $f21 0;
+            width: 100%;
+            td {
+              width: 50%;
+              font-family: AcrobatRegular, sans-serif;
+              font-size: $f21;
+              color: $black;
+              text-align: right;
+              vertical-align: bottom;
+              padding-bottom: 1.377vw;
+              text-transform: uppercase;
+              &:last-of-type {
+                font-family: AcrobatBold, sans-serif !important;
+                * {
+                  font-family: AcrobatBold, sans-serif !important;
+                  color: $black;
+                }
+              }
+              span {
+                font-size: $f34;
+                line-height: 0.77vw;
+              }
+            }
+          }
+        }
+        .summary {
+          margin-top: -$f21;
+          padding: $f34;
+          background-color: $lightgray;
+          table {
+            width: 100%;
+            * {
+              font-family: AcrobatBold, sans-serif !important;
+              color: $black;
+              font-size: $f34;
+            }
+            td {
+              width: 50%;
+              text-align: right;
+              vertical-align: bottom;
+              text-transform: uppercase;
+              &:first-of-type {
+                font-size: $f21 !important;
+              }
+              &:last-of-type {
+                font-family: AcrobatBold, sans-serif !important;
+              }
+              span {
+                font-size: $f55;
+                line-height: 1vw;
+              }
+            }
+          }
+        }
+
+      }
+    }
+
+    .payment-container {
+      margin-top: $f34;
+      height: $f55;
+      line-height: $f55;
+      text-align: center;
+      .ask-question {
+        display: inline-block;
+        width: 50%;
+        height: $f55;
+        line-height: $f55;
+        p {
+          font-family: AcrobatRegular, sans-serif;
+          font-size: $f21;
+          color: $gray;
+          float: left;
+        }
+        span {
+          font-family: AcrobatBold, sans-serif;
+          font-size: $f21;
+          text-decoration: underline;
+          color: $black;
+        }
+      }
+
+      .payment {
+        display: inline-block;
+        width: 50%;
+        height: $f55;
+        line-height: $f55;
+        .payment-info {
+          float: left;
+          img {
+            vertical-align: middle;
+            height: auto;
+            margin-right: $f21;
+          }
+        }
+        .payment-info-text {
+          display: inline-block;
+          height: $f55;
+          line-height: $f55;
+          cursor:pointer;
+          p {
+            font-family: AcrobatBold, sans-serif;
+            font-size: $f21;
+            text-decoration: underline;
+            color: $black;
+          }
+        }
+        .payment-btn {
+          float: right;
+          height: $f55;
+          line-height: $f55;
+          .inactive {
+            background-color: $green;
+            border-color: $green;
+            opacity: 0.33;
+          }
+        }
+      }
+    }
+  }
+
+  .product {
+    position: relative;
+    .separator-small {
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      background-color: $lightgray;
+      width: calc(100% - #{$f233} - #{$f34});
+    }
+
+    .content {
+      position: relative;
+      text-align: left;
+      padding: $f21 0;
+      background-color: $white;
+
+      .product-image {
+        @include product-image;
+      }
+
+      .product-description {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        display: inline-block;
+        margin-left: $f34;
+        .product-type {
+          font-family: AcrobatBold, sans-serif;
+          font-size: $f21;
+          line-height: $f21;
+          color: $red;
+          text-transform: uppercase;
+          margin-bottom: $f8;
+        }
+        @include product-details;
+      }
+
+      .product-price {
+        @include vertical-centerer();
+        right: $f89;
+        font-family: AcrobatBold, sans-serif;
+        font-size: $f55;
+        color: $black;
+        position: absolute;
+        padding-right: $f68;
+        span {
+          font-family: AcrobatBold, sans-serif;
+          font-size: $f34;
+          color: $black;
+          vertical-align: bottom;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
+      }
+
+      .product-delete {
+        @include vertical-centerer();
+        right: $f34;
+        position: absolute;
+        br {
+          display: block;
+          margin-bottom: $f34;
+        }
+        .product-delete-btn {
+          img {
+            height: $f21;
+            width: $f21;
+            vertical-align: bottom;
+          }
+        }
+      }
+
+    }
+  }
+
+}

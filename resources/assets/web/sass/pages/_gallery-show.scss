@@ -1,0 +1,243 @@
+#gallery-show {
+  margin-top: $f68;
+  overflow-y: auto;
+  padding-bottom:$f400;
+
+  section.banner {
+    height: fn-w(610);
+    background-color: $white;
+  }
+  #info-box{
+    display: none;
+  }
+  section.title-bar {
+    height: $f144;
+    background-color: $white;
+    position: relative;
+    padding: 0 $f89;
+    margin-bottom: 2px;
+    .title {
+      @include vertical-centerer();
+      display: inline-block;
+      h1 {
+        font-family: UniNeueBold, sans-serif;
+        font-size: $f42;
+        color: $black;
+      }
+      h2 {
+        font-family: AcrobatBold, sans-serif;
+        font-size: $f26;
+        color: $gray;
+      }
+    }
+    .navigation {
+      float: right;
+      display: inline-block;
+      height: $f144;
+      line-height: $f144;
+      .btn {
+        margin-left: $f21;
+      }
+    }
+  }
+
+  section.authors-bar {
+    background-color: $white;
+    padding: $f55 $f89;
+    padding-bottom:$f89;
+
+    .header {
+      h2 {
+        font-family: AcrobatBold, sans-serif;
+        font-size: $f34;
+        color: $black;
+        display: inline-block;
+        line-height: $f34;
+        height: $f34;
+      }
+      .navigation {
+        display: inline-block;
+        float: right;
+        line-height: $f34;
+        height: $f34;
+        .show-more-authors-button {
+          font-family: AcrobatBold, sans-serif;
+          font-size: $f21;
+          color: $black;
+          vertical-align: bottom;
+          cursor: pointer;
+          height: $f34;
+          line-height: $f34;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .authors-small-list {
+      margin-top: $f21;
+      margin-left: -$f16;
+      margin-right: -$f16;
+      max-height:$f89;
+      overflow:hidden;
+      &.expand {
+        max-height:none;
+        overflow:auto;
+      }
+      .author-single {
+        position: relative;
+        display: inline-block;
+        width: calc(25% - #{$f34});
+        margin: 0 $f16;
+        margin-bottom: $f21;
+        height: $f89;
+        &:hover {
+          background-color: $lightgray;
+          cursor: pointer;
+          transition: all 0.07s ease;
+        }
+
+        .author-avatar {
+          display: inline-block;
+          width: $f89;
+          height: $f89;
+          overflow: hidden;
+          margin: 0;
+        }
+        .author-description {
+          display: inline-block;
+          width: calc(100% - #{$f89});
+          @include vertical-centerer();
+          margin: 0;
+          padding-left: $f21;
+
+          h2 {
+            font-family: AcrobatBold, sans-serif;
+            font-size: $f21;
+            color: $black;
+          }
+          h3 {
+            font-family: AcrobatBold, sans-serif;
+            font-size: $f21;
+            color: $gray;
+          }
+        }
+      }
+    }
+  }
+  #main-content {
+    height: auto;
+    overflow: auto;
+  }
+}
+
+
+#gallery-about-popup, #terms-about-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+  background-color: rgba(35, 35, 45, 0.95);
+  width: 100%;
+  height: 100vh;
+  display: none;
+  h2 {
+    margin-bottom:$f8 !important;
+  }
+}
+.gallery-about-container, .terms-about-container {
+  position:absolute;
+  top: calc(50% - #{fn-w(305)});
+  left: calc(50% - #{fn-w(610)});
+  display: inline-block;
+  height: fn-w(610);
+  width: calc(#{fn-w(610)} * 2);
+  background-color: $white;
+  margin:auto auto;
+
+  ::-webkit-scrollbar {
+    width: 8px !important; /* 1px wider than Lion. */
+    /* This is more usable for users trying to click it. */
+    background-color: rgba(0,0,0,0);
+    -webkit-border-radius: 100px;
+  }
+  /* hover effect for both scrollbar area, and scrollbar 'thumb' */
+  ::-webkit-scrollbar:hover {
+    background-color: rgba(0, 0, 0, 0.09);
+  }
+
+  /* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+  ::-webkit-scrollbar-thumb:vertical {
+    /* This is the EXACT color of Mac OS scrollbars.
+       Yes, I pulled out digital color meter */
+    background: rgba(0,0,0,0.5);
+    -webkit-border-radius: 100px;
+  }
+  ::-webkit-scrollbar-thumb:vertical:active {
+    background: rgba(0,0,0,0.61); /* Some darker color when you click it */
+    -webkit-border-radius: 100px;
+  }
+
+
+  .gallery-avatar {
+    display: inline-block;
+    width: fn-w(610);
+    background-color: $black;
+    height: fn-w(610);
+  }
+  .gallery-description {
+    display: inline-block;
+    width: fn-w(610);
+    padding: $f34;
+    overflow:scroll;
+    height: fn-w(610);
+
+    h2 {
+      font-family: AcrobatBold, sans-serif;
+      font-size: $f34;
+      color: $black;
+      margin-bottom:$f16;
+      margin-top:$f21;
+    }
+    h3 {
+      font-family: AcrobatBold, sans-serif;
+      font-size: $f26;
+      color: $gray;
+    }
+    p {
+      font-family: AcrobatRegular, sans-serif;
+      font-size: $f21;
+      line-height: $f26;
+      color: $gray;
+    }
+    .underline {
+      border-bottom: 2px solid $gray;
+      margin: $f26 0;
+    }
+    .gallery-links {
+      margin-bottom: $f26;
+      .inline {
+        display: inline-block;
+        margin-right: $f8;
+      }
+      .socials {
+        a {
+          color: $gray !important;
+        }
+      }
+      .gallery-link-box {
+        margin-bottom: $f5;
+        a {
+          text-decoration: none;
+          font-family: AcrobatBold, sans-serif;
+          font-size: $f21;
+          color: $black;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

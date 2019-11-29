@@ -1,0 +1,61 @@
+@import '../../pages/subscriptions';
+
+@media screen and (max-width: 700px) {
+  #subscriptions {
+    margin-top: $f144;
+    #subscription-navigation + & {
+      margin-top: $f288;
+    }
+    .d-n {
+      display: none;
+    }
+    @include mobile-headings;
+    .top-sp-68 {
+      padding-top: 0;
+      margin-top: 0;
+    }
+    .wrapper {
+      padding: $f34;
+      margin-left: 0;
+      margin-right: 0;
+      #columns {
+        margin: 0 auto;
+      }
+    }
+    .author-container, #authors-edit .author-container {
+      width: calc(50% - #{$f16});
+      &:nth-child(2n+1) {
+        margin-left: 0;
+        margin-right: $f16;
+      }
+      &:nth-child(2n) {
+        margin-left: $f16;
+        margin-right: 0;
+      }
+    }
+    .author-container {
+      .author-avatar {
+        border: $f8 solid #fff;
+        .img-block {
+          //height: $f466;
+          height: calc((100vw - ((#{$f34} * 3) + #{$f13} * 4)) / 2);
+        }
+      }
+      .author-content {
+        .name {
+          font-size: $f42;
+          font-family: AcrobatExtraBold, sans-serif;
+          text-transform: uppercase;
+          margin-top: $f26;
+          margin-left: $f21;
+        }
+        .country {
+          font-size: $f42;
+          font-family: AcrobatBold, sans-serif;
+          margin-bottom: $f26;
+          margin-left: $f21;
+        }
+      }
+    }
+  }
+}

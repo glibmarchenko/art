@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 960 304" style="enable-background:new 0 0 960 304;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#F6F5F0;stroke:#000000;stroke-miterlimit:10;}
+	.st1{fill:#F5F5F0;}
+	.st2{fill:none;stroke:#23232D;stroke-width:2;stroke-miterlimit:10;}
+</style>
+<path class="st0" d="M892.333,304.428"/>
+<path class="st0" d="M892.333,0.908"/>
+<path class="st0" d="M0,0.48"/>
+<path class="st0" d="M0,304"/>
+<g>
+	<rect x="327.86" y="0.48" class="st1" width="304.281" height="303.52"/>
+	<g>
+		<g>
+			<circle class="st2" cx="480" cy="154.309" r="25.986"/>
+			<circle class="st2" cx="480" cy="154.309" r="20.881"/>
+			<path class="st2" d="M533.135,123.044h-32.254l-5.036-4.655h-31.82l-4.929,4.671h-32.231c-0.802,0-1.453,0.651-1.453,1.453
+				v59.738c0,0.802,0.65,1.453,1.453,1.453h106.278c0.802,0,1.453-0.65,1.453-1.453v0v-59.776
+				C534.583,123.678,533.932,123.04,533.135,123.044z"/>
+			<path class="st2" d="M438.268,122.877v-3.446c0-0.802,0.65-1.453,1.453-1.453h5.287c0.802,0,1.453,0.651,1.453,1.453v3.522"/>
+		</g>
+		<g>
+			<line class="st2" x1="480" y1="141.377" x2="480" y2="167.233"/>
+			<line class="st2" x1="492.932" y1="154.309" x2="467.068" y2="154.309"/>
+		</g>
+	</g>
+</g>
+</svg>

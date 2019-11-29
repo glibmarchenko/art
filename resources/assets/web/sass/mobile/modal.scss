@@ -1,0 +1,108 @@
+@media screen and (max-width: 700px) {
+
+  .modal-dialog {
+    vertical-align: inherit;
+    margin: 0 0;
+    padding: 0 $f34;
+    width: 100%;
+    left: 2px;
+    height: 100%;
+
+    .modal-content {
+      padding: $f26;
+      top: $f377;
+
+      .modal-close-circle {
+        @include popup-close-circle;
+        top: calc(-#{$f68} - #{$f89});
+      }
+
+      .modal-heading {
+        text-align: center;
+        height: $f110;
+        margin-bottom: $f68;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        &, & a {
+          font-size: $f68;
+        }
+      }
+
+      p {
+        font-size: $f42;
+        line-height: $f55;
+        margin-top: $f55;
+        text-align: center;
+      }
+
+      .socials-container {
+        margin-bottom: $f34;
+        div img {
+          height: $f144;
+        }
+      }
+      .modal-form {
+
+        input {
+          height: $f144;
+          line-height: $f144;
+          font-size: $f55;
+
+          &.submit {
+            margin-top: $f34;
+            margin-bottom: 0;
+          }
+        }
+
+        .form-error-message {
+          font-size: $f42;
+        }
+      }
+      #rules-block {
+        width: 100%;
+        height: 100%;
+        .description {
+          width: 100%;
+          height: 90%;
+          font-size: $f42;
+          line-height: inherit;
+          h4 {
+            font-size: $f55;
+            line-height: inherit;
+          }
+        }
+        .text-center {
+          width: 100%;
+        }
+      }
+      .forgot-password a {
+        font-size: $f42;
+        padding-top: 0;
+        padding-bottom: 0;
+        line-height: $f144;
+      }
+      .modal-close-wrapper {
+        display: block;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        left: 0;
+        bottom: calc(-#{$f89} - #{$f89});
+        .btn {
+          border-width: 1px;
+          line-height: $f89;
+        }
+      }
+    }
+  }
+
+  .modal-backdrop.in {
+    opacity: .9;
+    top: $f144;
+  }
+
+  .phpdebugbar {
+    display: none;
+  }
+}

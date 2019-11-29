@@ -1,0 +1,31 @@
+<?php
+
+return [
+    'names' => [
+        'z3D'           => '3D rendering',
+        'abstract'      => 'Abstract',
+        'author'        => 'Author\'s style',
+        'artdeco'       => 'Art Deco',
+        'geometry'      => 'Geometry',
+        'hyperrealism'  => 'Hyperrealism',
+        'graphics'      => 'Graphics',
+        'calligraphy'   => 'Calligraphy',
+        'collage'       => 'Collage',
+        'сonceptual'    => 'Conceptual',
+        'character'     => 'Character',
+        'expressionism' => 'Expressionism',
+        'figurative'    => 'Figurative',
+        'futurism'      => 'Futurism',
+        'landscape'     => 'Landscape',
+        'minimalism'    => 'Minimalism',
+        'pop'           => 'Pop Art',
+        'portraiture'   => 'Portrait',
+        'still life'    => 'Still life',
+        'street'        => 'Street art',
+        'surrealism'    => 'Surrealism',
+        'decor'         => 'Decor',
+        'furniture'     => 'Furniture',
+        'light'         => 'Light',
+        'sculpture'     => 'Sculpture',
+    ],
+];

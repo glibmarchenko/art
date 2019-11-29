@@ -1,0 +1,59 @@
+.picture-input {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  max-width:$f400;
+
+  canvas {
+
+  }
+}
+.preview-container {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  cursor: pointer;
+  overflow: hidden;
+}
+.picture-preview {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 10001;
+  box-sizing: border-box;
+  background:url('/web/images/ui/icon-default-avatar.svg') no-repeat center;
+  box-shadow:0px 0px 0px $f5 $white;
+}
+.picture-preview.dragging-over {
+  filter: brightness(0.5);
+}
+.picture-inner {
+  position: relative;
+  z-index: 10002;
+  pointer-events: none;
+  box-sizing: border-box;
+  margin: 1em auto;
+  padding: 0.5em;
+  border: .3em dashed rgba(66,66,66,.15);
+  border-radius: 8px;
+  width: calc(100% - 2.5em);
+  height: calc(100% - 2.5em);
+  display: table;
+}
+.picture-inner .picture-inner-text {
+  display: block;
+  position:absolute;
+  text-align:center;
+  bottom:$f21;
+  vertical-align: bottom;
+  width:100%;
+  font-size: 2em;
+  line-height: 1.5;
+}
+button {
+  margin: 1em .25em;
+  cursor: pointer;
+}
+input[type=file] {
+  display: none;
+}

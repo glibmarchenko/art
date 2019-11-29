@@ -1,0 +1,156 @@
+
+.gallery-page{
+  margin-top: $f68;
+  height: calc(100vh - #{$f68});
+  overflow-y: auto;
+  .main-gallery-bg{
+    width: 100%;
+    background-color: #f5f5f0;
+    img{
+      width: 100%;
+    }
+  }
+
+  .gallery-title-row{
+    display: table;
+    width: 100%;
+    border-bottom: fn-w(1) solid $lowlightgray;
+    .gallery-cell{
+      padding: $f34 $f42;
+      display: table-cell;
+      vertical-align: middle;
+      &.subscribe-cell{
+        text-align: right;
+        width: 25%;
+        .subscribe-now{
+          display: inline-block;
+        }
+      }
+      .gallery-name{
+        font-family: UniNeueBold;
+        font-size: $f42;
+        color: $black;
+        margin-bottom: $f8;
+      }
+      .gallery-address{
+        font-family: AcrobatBold;
+        font-size: $f26;
+        color: $gray;
+      }
+    }
+  }
+
+  .gallery-detail-blocks{
+    display: table;
+    width: 100%;
+  }
+
+  .gallery-left-block{
+    position: relative;
+    width: 25%;
+    display: table-cell;
+    padding: $f42 $f34;
+    /*max-height: calc(100vh - #{$f144});
+    overflow-y: auto;*/
+
+    .gallery-links{
+      margin-bottom: $f42;
+      .gallery-link-box{
+        margin-bottom: $f8;
+        a{
+          text-decoration: none;
+          font-family: AcrobatBold;
+          font-size: $f16;
+          color: $black;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .gallery-description-block{
+      font-size: $f21;
+      font-family: AcrobatRegular;
+      line-height: 1.2;
+      color: $black;
+      margin-bottom: $f42;
+    }
+
+    .gallery-artists{
+      .gallery-artists-title{
+        font-family: UniNeueHeavy;
+        font-size: $f26;
+        color: $black;
+        margin-bottom: $f26;
+      }
+      .gallery-artists-list{
+        .author-row {
+          margin-bottom: $f34;
+          figure {
+            height: $f68;
+            width: $f68;
+            display: inline-block;
+            img {
+              border-radius: 50%;
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+              border: 2px solid $white;
+            }
+          }
+          .about-user {
+            display: inline-block;
+            padding: $f13 0 0 $f21;
+            h5 {
+              padding-bottom: $f5;
+              a {
+                font-size: $f21;
+                font-family: AcrobatBold, sans-serif;
+                text-decoration: none;
+                color: $black;
+                &:hover{
+                  text-decoration: underline;
+                }
+              }
+            }
+            p {
+              font-size: $f16;
+            }
+          }
+        }
+      }
+    }
+
+    >div:last-child{
+      margin-bottom: 0;
+    }
+
+
+  }
+
+  .gallery-items{
+    padding-top:$f34;
+    position: relative;
+    width: 75%;
+    display: table-cell;
+    background-color: $lowlightgray;
+
+    .empty-result{
+      padding: $f68;
+    }
+    .wrapper{
+      background-color: $lowlightgray;
+      position: relative;
+      padding-right: $f10;
+      &#columns{
+        width: 100%;
+        &.columns-3{
+          .pic-content-block{
+            width: calc(27.5%);
+          }
+        }
+      }
+    }
+  }
+}
